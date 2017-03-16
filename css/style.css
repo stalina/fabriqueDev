@@ -35,3 +35,10 @@ h1,
   visibility: hidden;
   opacity: 0;
 }
+
+.strokeIt {
+  stroke: rgb(248, 135, 110)
+}
+.fillIt {
+  fill: rgb(248, 135, 110)
+}
