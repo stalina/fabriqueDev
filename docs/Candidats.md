@@ -10,9 +10,19 @@ CVS
 bitbucket  
 bazaar  
 
+CI
+-----
+jenkins  
+travis  
+bamboo  
+codeship  
+teamcity  
+continuum  
+cruisecontrol  
+
 Serveur
 ----------
-Ngnix  
+[Nginx](./nginx.md) NOT FINISHED yet 
 Apache  
 tomcat  
 wildfire  
@@ -24,16 +34,6 @@ nexus
 artefactory  
 npm   
 docker hub  
-
-CI
------
-jenkins  
-travis  
-bamboo  
-codeship  
-teamcity  
-continuum  
-cruisecontrol  
 
 Ops
 -----
