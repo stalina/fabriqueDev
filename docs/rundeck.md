@@ -10,7 +10,7 @@ version: "3"
 
 services:
     rundeck:
-        image: jordan/rundeck
+        image: jordan/rundeck:2.7.3
         ports:
             - 8083:4440
             - 8483:4443

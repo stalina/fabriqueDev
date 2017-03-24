@@ -55,7 +55,19 @@ services:
         volumes:
             - /tmp/frabiq/nginx/html:/usr/share/nginx/html 
         networks:
-            - frabriqueDev 
+            - frabriqueDev
+            
+    sonarqube:
+        image: sonarqube:6.3-alpine
+        ports:
+            - 8085:9000
+        volumes:
+            - /tmp/frabiq/sonarqube/conf:/opt/sonarqube/conf
+            - /tmp/frabiq/sonarqube/data:/opt/sonarqube/data
+            - /tmp/frabiq/sonarqube/extensions:/opt/sonarqube/extensions
+            - /tmp/frabiq/sonarqube/bundled-plugins:/opt/sonarqube/lib/bundled-plugins
+        networks:
+            - frabriqueDev  
 networks:
   frabriqueDev:
     driver: bridge

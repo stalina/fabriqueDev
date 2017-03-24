@@ -10,7 +10,7 @@ version: "3"
 
 services:
     nginx:
-        image: nginx
+        image: nginx:1.11-alpine
         ports:
             - 8084:80
         volumes:
