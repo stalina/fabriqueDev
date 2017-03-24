@@ -1,0 +1,25 @@
+#breakingbad{
+  margin-top: 50vh; 
+  transform: translateY(-50%);
+    position: relative;
+}
+.disabled{
+    color: red;
+    background-color: red;
+}
+.none{
+    height: 100px;
+    width: 100px;
+    margin:5px;
+}
+.tools{
+    display: table;
+    margin: 0 auto;
+    margin:5px;
+}
+.scm{
+    background-color: pink;
+}
+.ci{
+    background-color: red;
+}

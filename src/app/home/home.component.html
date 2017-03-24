@@ -1,0 +1,17 @@
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4>Settings</h4>
+  </div>
+  <div class="modal-body">
+    <div class="form-group">
+      <label for="ip">IP of your CI</label>
+      <input type="url" [(ngModel)]="identityService.identity.ciIp" class="form-control" aria-describedby="Ip of your ci" placeholder="localhost"
+      />
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-primary" (click)="save();c()">Save</button>
+    <button type="button" class="btn btn-secondary" (click)="c('Close click')">Close</button>
+  </div>
+</ng-template>
+<img (click)="open(content)" width="100px" src="assets/home.png">
