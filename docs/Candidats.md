@@ -29,25 +29,20 @@ docker hub
 
 Ops
 -----
-rundeck  
+[Rundeck](./rundeck.md)  NOT FINISHED yet missong project configuration
 cigo  
 
 Serveur
 ----------
-[Nginx](./nginx.md) NOT FINISHED yet 
+[Nginx](./nginx.md)
 Apache  
 tomcat  
 wildfire  
 web sphere  
 
-Ops
------
-rundeck  
-cigo  
-
 Quality
 -------
-sonar  
+[Sonar](./sonar.md)  
 codacy  
 teamscale  
 squale  

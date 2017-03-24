@@ -31,6 +31,31 @@ services:
         networks:
             - frabriqueDev
 
+    rundeck:
+        image: jordan/rundeck
+        ports:
+            - 8083:4440
+            - 8483:4443
+        volumes:
+            - /tmp/frabiq/rundeck/etc:/etc/rundeck
+            - /tmp/frabiq/rundeck/var:/var/rundeck
+            - /tmp/frabiq/rundeck/varlog:/var/log/rundeck
+            - /tmp/frabiq/rundeck/plugins:/opt/rundeck-plugins
+            - /tmp/frabiq/rundeck/log:/var/lib/rundeck/logs
+            - /tmp/frabiq/rundeck/data:/var/lib/rundeck/var/storage
+        environment:
+            - RUNDECK_ADMIN_PASSWORD=admin
+        networks:
+            - frabriqueDev  
+
+    nginx:
+        image: nginx
+        ports:
+            - 8084:80
+        volumes:
+            - /tmp/frabiq/nginx/html:/usr/share/nginx/html 
+        networks:
+            - frabriqueDev 
 networks:
   frabriqueDev:
     driver: bridge

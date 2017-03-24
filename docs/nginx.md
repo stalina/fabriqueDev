@@ -12,7 +12,7 @@ services:
     nginx:
         image: nginx
         ports:
-            - 8081:80
+            - 8084:80
         volumes:
             - /tmp/frabiq/nginx/html:/usr/share/nginx/html 
         networks:
