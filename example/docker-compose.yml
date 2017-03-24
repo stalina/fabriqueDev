@@ -85,6 +85,13 @@ services:
             - /tmp/fabriq/wekan/mongo:/data/db
         networks:
             - frabriqueDev  
+
+    mattermost:
+        image: mattermost/mattermost-preview:3.7
+        ports:
+            - 8087:8065
+        networks:
+            - frabriqueDev  
  
 networks:
   frabriqueDev:

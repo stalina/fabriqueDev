@@ -29,3 +29,5 @@ networks:
   frabriqueDev:
     driver: bridge
 ```
+
+* creer votre propre utilisateur (une erreur 500 peut survenir mais peut-être ignorée)

@@ -60,7 +60,10 @@ redmine
 
 Communication
 ----------
-slack
+[Mattermost](./mattermost.md)
+zulip
+IRC
+Matrix
 ...
 
 
