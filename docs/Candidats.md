@@ -3,7 +3,7 @@ Candidats à la fabrique de dev
 
 Gestionnaire de source
 ----------------------
-Git  
+[GitLab](./gitLab.md)   
 svn  
 Mercurial  
 CVS  
