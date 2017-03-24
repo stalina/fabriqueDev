@@ -12,13 +12,25 @@ bazaar
 
 CI
 -----
-[Jenkins](./jenkins.md)  
+[Jenkins](./jenkins.md) NOT FINISHED yet missing build system  
 travis  
 bamboo  
 codeship  
 teamcity  
 continuum  
 cruisecontrol  
+
+Repo
+-------
+[Nexus](./nexus.md) NOT FINISHED yet missing jenkins configuration + push   
+artefactory  
+npm   
+docker hub  
+
+Ops
+-----
+rundeck  
+cigo  
 
 Serveur
 ----------
@@ -27,13 +39,6 @@ Apache
 tomcat  
 wildfire  
 web sphere  
-
-Repo
--------
-nexus  
-artefactory  
-npm   
-docker hub  
 
 Ops
 -----
