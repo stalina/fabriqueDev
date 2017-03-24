@@ -52,9 +52,9 @@ cast
 
 Organization
 ------------
+[Wekan](./wekan.md)  
 team foundation  
 trello  
-wecan  
 jira  
 redmine  
 
