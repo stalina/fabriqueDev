@@ -10,14 +10,14 @@ version: "3"
 
 services:
     gitlab:
-        image: gitlab/gitlab-ce:latest
+        image: gitlab/gitlab-ce:9.0.0-ce.0
         ports:
             - 8080:80
             - 8443:443
         volumes:
-            - /tmp/gitlab/config:/etc/gitlab 
-            - /tmp/gitlab/logs:/var/log/gitlab 
-            - /tmp/gitlab/data:/var/opt/gitlab 
+            - /tmp/frabiq/gitlab/config:/etc/gitlab 
+            - /tmp/frabiq/gitlab/logs:/var/log/gitlab 
+            - /tmp/frabiq/gitlab/data:/var/opt/gitlab 
         networks:
             - frabriqueDev  
 

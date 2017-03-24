@@ -12,7 +12,7 @@ bazaar
 
 CI
 -----
-jenkins  
+[Jenkins](./jenkins.md)  
 travis  
 bamboo  
 codeship  
