@@ -8,8 +8,8 @@
     background-color: red;
 }
 .none{
-    height: 100px;
-    width: 100px;
+    height: 70px;
+    width: 70px;
     margin:5px;
 }
 .tools{
@@ -22,4 +22,22 @@
 }
 .ci{
     background-color: red;
+}
+.repo{
+    background-color: orange;
+}
+.ops{
+    background-color: violet;
+}
+.server{
+    background-color: orange;
+}
+.quality{
+    background-color: aqua;
+}
+.organization{
+    background-color: saddlebrown;
+}
+.communication{
+    background-color: green;
 }

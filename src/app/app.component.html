@@ -3,22 +3,37 @@
   <div id="breakingbad" fxLayout="row" fxLayoutAlign="center stretch" class="fxClass-all" class.xs="fxClass-xs" [class.sm]="{'fxClass-sm': hasStyle}"
     [class.md]="{'fxClass-md': hasStyle, 'fxClass-md2': hasStyle}" [class.lg]="['fxClass-lg', 'fxClass-lg2']">
     <div fxLayout="column">
-      <div class="ci"><object class="disabled tools" data="assets/formules/bamboo.svg" width="100" type="image/svg+xml"></object></div>
-      <div class="ci"><object class="disabled tools" data="assets/formules/jenkins.svg" width="100" type="image/svg+xml"></object></div>
+      <div class="ci">
+        <app-nginx></app-nginx>
+      </div>
+      <div class="ci">
+        <app-jenkins></app-jenkins>
+      </div>
       <div class="none"></div>
     </div>
     <div fxLayout="column">
-      <div><object class="tools" data="assets/formules/br.svg" width="100" type="image/svg+xml"></object></div>
+      <div><object class="tools" data="assets/formules/br.svg" width="70" type="image/svg+xml"></object></div>
       <div class="scm">
         <app-git></app-git>
       </div>
-      <div class="scm"><object class="disabled tools" data="assets/formules/hg.svg" width="100" type="image/svg+xml"></object></div>
+      <div class="scm">
+        <app-bazaar></app-bazaar>
+      </div>
+      <div class="scm">
+        <app-bitbucket></app-bitbucket>
+      </div>
+      <div class="scm">
+        <app-cvs></app-cvs>
+      </div>
+      <div class="scm">
+        <app-mercurial></app-mercurial>
+      </div>  
     </div>
     <div fxLayout="column">
     </div>
     <div fxLayout="column">
       <div class="none"></div>
-      <div><object class="tools" data="assets/formules/ba.svg" width="100" type="image/svg+xml"></object></div>
+      <div><object class="tools" data="assets/formules/ba.svg" width="70" type="image/svg+xml"></object></div>
     </div>
 </div>
 </div>

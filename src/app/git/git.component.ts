@@ -4,6 +4,7 @@ import { NgbTabsetConfig } from '@ng-bootstrap/ng-bootstrap';
 import { Observable } from 'rxjs/Rx';
 import { CheckToolsService } from '../check-tools.service'
 import { Tools } from '../tools'
+import {ToolComponent} from '../tool-component'
 
 @Component({
   selector: 'app-git',
@@ -11,17 +12,13 @@ import { Tools } from '../tools'
   styleUrls: ['./git.component.css'],
   providers: [NgbTabsetConfig]
 })
-export class GitComponent implements OnInit {
-  health = false;
+export class GitComponent extends ToolComponent implements OnInit {
+
   constructor(private modalService: NgbModal, config: NgbTabsetConfig, private checkToolsService: CheckToolsService) {
+    super(checkToolsService,Tools.GIT);
     config.justify = 'center';
     config.type = 'pills';
-    Observable.interval(10000).subscribe(x => {
-      this.checkToolsService.health(Tools.GIT)
-        .subscribe(
-        health => this.health = true,
-        error => this.health = false);
-    });
+   
   }
 
   open(content) {
