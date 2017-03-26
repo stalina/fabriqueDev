@@ -3,16 +3,7 @@
   <div id="breakingbad" fxLayout="row" fxLayoutAlign="center stretch" class="fxClass-all" class.xs="fxClass-xs" [class.sm]="{'fxClass-sm': hasStyle}"
     [class.md]="{'fxClass-md': hasStyle, 'fxClass-md2': hasStyle}" [class.lg]="['fxClass-lg', 'fxClass-lg2']">
     <div fxLayout="column">
-      <div class="ci">
-        <app-nginx></app-nginx>
-      </div>
-      <div class="ci">
-        <app-jenkins></app-jenkins>
-      </div>
       <div class="none"></div>
-    </div>
-    <div fxLayout="column">
-      <div><object class="tools" data="assets/formules/br.svg" width="70" type="image/svg+xml"></object></div>
       <div class="scm">
         <app-git></app-git>
       </div>
@@ -27,13 +18,92 @@
       </div>
       <div class="scm">
         <app-mercurial></app-mercurial>
-      </div>  
+      </div>
     </div>
     <div fxLayout="column">
+      <div class="communication">
+        <app-mattermost></app-mattermost>
+      </div>
+      <div class="server">
+        <app-nginx></app-nginx>
+      </div>
+      <div class="server">
+        <app-apache></app-apache>
+      </div>
+      <div class="server">
+        <app-tomcat></app-tomcat>
+      </div>
+      <div class="server">
+        <app-wildfire></app-wildfire>
+      </div>
+      <div class="server">
+        <app-websphere></app-websphere>
+      </div>
+      <div class="none"></div>
+    </div>
+    <div fxLayout="column">
+      <div class="communication">
+        <app-zulip></app-zulip>
+      </div>
+      <div><object class="tools" data="assets/formules/br.svg" width="70" type="image/svg+xml"></object></div>
+      <div class="ops">
+        <app-rundeck></app-rundeck>
+      </div>
+      <div class="ops">
+        <app-cigo></app-cigo>
+      </div>
+    </div>
+    <div fxLayout="column">
+    </div>
+    <div fxLayout="column">
+      <div class="communication">
+        <app-irc></app-irc>
+      </div>
+      <div class="communication">
+        <app-matrix></app-matrix>
+      </div>
+      <div><object class="tools" data="assets/formules/ba.svg" width="70" type="image/svg+xml"></object></div>
+      <div class="organization">
+        <app-redmine></app-redmine>
+      </div>
     </div>
     <div fxLayout="column">
       <div class="none"></div>
-      <div><object class="tools" data="assets/formules/ba.svg" width="70" type="image/svg+xml"></object></div>
+      <div class="organization">
+        <app-wekan></app-wekan>
+      </div>
+      <div class="organization">
+        <app-teamfoundation></app-teamfoundation>
+      </div>
+      <div class="organization">
+        <app-trello></app-trello>
+      </div>
+      <div class="organization">
+        <app-jira></app-jira>
+      </div>
+      <div class="quality">
+        <app-metrix-ware></app-metrix-ware>
+      </div>
+    </div>
+    <div fxLayout="column">
+      <div class="quality">
+        <app-sonar></app-sonar>
+      </div>
+      <div class="quality">
+        <app-codacy></app-codacy>
+      </div>
+      <div class="quality">
+        <app-teamscale></app-teamscale>
+      </div>
+      <div class="quality">
+        <app-squale></app-squale>
+      </div>
+      <div class="quality">
+        <app-kalistick></app-kalistick>
+      </div>
+      <div class="quality">
+        <app-cast></app-cast>
+      </div>
     </div>
 </div>
 </div>
