@@ -1,6 +1,7 @@
-import {Injectable} from '@angular/core';
+import { Injectable } from '@angular/core';
 
-import {Identity} from "./identity";
+import { Identity } from "./identity";
+import { Tools } from "./tools";
 
 @Injectable()
 export class IdentityService {
@@ -12,12 +13,12 @@ export class IdentityService {
   }
 
   save() {
-    localStorage.setItem('fabriquetonci', JSON.stringify(this.identity));
+    localStorage.setItem('fabriquetonusine', JSON.stringify(this.identity));
   }
 
   load() {
-    this.identity = JSON.parse(localStorage.getItem('fabriquetonci'));
-    if(!this.identity){
+    this.identity = JSON.parse(localStorage.getItem('fabriquetonusine'));
+    if (!this.identity) {
       this.identity = new Identity();
       this.save();
     }

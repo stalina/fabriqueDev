@@ -50,6 +50,7 @@ import { RedmineComponent } from './redmine/redmine.component';
 import { ZulipComponent } from './zulip/zulip.component';
 import { IrcComponent } from './irc/irc.component';
 import { MatrixComponent } from './matrix/matrix.component';
+import { CycleComponent } from './cycle/cycle.component';
 
 @NgModule({
   declarations: [
@@ -94,7 +95,8 @@ import { MatrixComponent } from './matrix/matrix.component';
     RedmineComponent,
     ZulipComponent,
     IrcComponent,
-    MatrixComponent
+    MatrixComponent,
+    CycleComponent
   ],
   imports: [
     BrowserModule,

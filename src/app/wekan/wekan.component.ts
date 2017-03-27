@@ -4,6 +4,7 @@ import { NgbTabsetConfig } from '@ng-bootstrap/ng-bootstrap';
 import { Observable } from 'rxjs/Rx';
 import { CheckToolsService } from '../check-tools.service'
 import { Tools } from '../tools'
+import { IdentityService } from '../identity.service';
 
 @Component({
   selector: 'app-wekan',
@@ -12,7 +13,7 @@ import { Tools } from '../tools'
 })
 export class WekanComponent implements OnInit {
   health = false;
-  constructor(private modalService: NgbModal, config: NgbTabsetConfig, private checkToolsService: CheckToolsService) {
+  constructor(private modalService: NgbModal, config: NgbTabsetConfig, private checkToolsService: CheckToolsService,private identityService:IdentityService) {
     config.justify = 'center';
     config.type = 'pills';
     Observable.interval(10000).subscribe(x => {

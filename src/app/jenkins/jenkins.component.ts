@@ -4,23 +4,21 @@ import { NgbTabsetConfig } from '@ng-bootstrap/ng-bootstrap';
 import { Observable } from 'rxjs/Rx';
 import { CheckToolsService } from '../check-tools.service'
 import { Tools } from '../tools'
+import { IdentityService } from '../identity.service';
+import {ToolComponent} from '../tool-component';
 
 @Component({
   selector: 'app-jenkins',
   templateUrl: './jenkins.component.html',
   styleUrls: ['./jenkins.component.css']
 })
-export class JenkinsComponent implements OnInit {
-  health = false;
-  constructor(private modalService: NgbModal, config: NgbTabsetConfig, private checkToolsService: CheckToolsService) {
+export class JenkinsComponent extends ToolComponent implements OnInit {
+
+  constructor(private modalService: NgbModal, config: NgbTabsetConfig, private checkToolsService: CheckToolsService,private identityService:IdentityService) {
+    super(checkToolsService,identityService,Tools.JENKINS);
     config.justify = 'center';
     config.type = 'pills';
-    Observable.interval(10000).subscribe(x => {
-      this.checkToolsService.health(Tools.JENKINS)
-        .subscribe(
-        health => this.health = true,
-        error => this.health = false);
-    });
+   
   }
 
   open(content) {

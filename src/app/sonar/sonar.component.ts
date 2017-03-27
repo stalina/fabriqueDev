@@ -5,6 +5,7 @@ import { Observable } from 'rxjs/Rx';
 import { CheckToolsService } from '../check-tools.service'
 import { Tools } from '../tools'
 import {ToolComponent} from '../tool-component'
+import { IdentityService } from '../identity.service';
 
 @Component({
   selector: 'app-sonar',
@@ -13,8 +14,8 @@ import {ToolComponent} from '../tool-component'
 })
 export class SonarComponent extends ToolComponent implements OnInit {
 
-  constructor(private modalService: NgbModal, config: NgbTabsetConfig, private checkToolsService: CheckToolsService) {
-    super(checkToolsService,Tools.SONAR);
+  constructor(private modalService: NgbModal, config: NgbTabsetConfig, private checkToolsService: CheckToolsService,private identityService:IdentityService) {
+    super(checkToolsService,identityService,Tools.SONAR);
     config.justify = 'center';
     config.type = 'pills';
    
