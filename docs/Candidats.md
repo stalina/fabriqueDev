@@ -13,7 +13,7 @@ bazaar
 CI
 -----
 [Jenkins](./jenkins.md) NOT FINISHED yet missing build system    
-[bamboo](./bamboo.md)  
+[Bamboo](./bamboo.md)  
 codeship  
 teamcity  
 continuum  
@@ -22,7 +22,7 @@ cruisecontrol
 Repo
 -------
 [Nexus](./nexus.md) NOT FINISHED yet missing jenkins configuration + push   
-artefactory  
+[Artifactory](./artifactory.md)  
 npm   
 docker hub  
 
