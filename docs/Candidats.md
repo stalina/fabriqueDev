@@ -13,7 +13,7 @@ bazaar
 CI
 -----
 [Jenkins](./jenkins.md) NOT FINISHED yet missing build system    
-bamboo  
+[bamboo](./bamboo.md)  
 codeship  
 teamcity  
 continuum  
