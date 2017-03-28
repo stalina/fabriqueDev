@@ -6,17 +6,27 @@
     <ngb-tabset>
       <ngb-tab title="Instructions">
         <template ngbTabContent>
-          <a href="https://github.com/sameersbn/docker-gitlab">Link to docker</a>
+          Official docker image : <a href="https://hub.docker.com/_/nginx/">https://hub.docker.com/_/nginx/</a>
         </template>
       </ngb-tab>
       <ngb-tab title="docker-compose">
         <template ngbTabContent>
           <pre class="prettyprint">
+version: "3"
+
 services:
-  redis:
-    restart: always
-    image: sameersbn/redis:latest
-    command:
+    nginx:
+        image: nginx:1.11-alpine
+        ports:
+            - 8084:80
+        volumes:
+            - /tmp/frabiq/nginx/html:/usr/share/nginx/html 
+        networks:
+            - frabriqueDev  
+
+networks:
+  frabriqueDev:
+    driver: bridge
         </pre>
         </template>
       </ngb-tab>

@@ -16,6 +16,18 @@ export class IdentityService {
     localStorage.setItem('fabriquetonusine', JSON.stringify(this.identity));
   }
 
+  clean() {
+    this.identity.ci = false;
+    this.identity.communication = false;
+    this.identity.ops = false;
+    this.identity.server = false;
+    this.identity.scm = false;
+    this.identity.repo = false;
+    this.identity.organization = false;
+    this.identity.quality = false;
+    this.save();
+  }
+
   load() {
     this.identity = JSON.parse(localStorage.getItem('fabriquetonusine'));
     if (!this.identity) {

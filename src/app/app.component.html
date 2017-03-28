@@ -4,6 +4,35 @@
     [class.md]="{'fxClass-md': hasStyle, 'fxClass-md2': hasStyle}" [class.lg]="['fxClass-lg', 'fxClass-lg2']">
     <div fxLayout="column">
       <div class="none"></div>
+      <div class="ci">
+        <app-codeship></app-codeship>
+      </div>
+      <div class="ci">
+        <app-teamcity></app-teamcity>
+      </div>
+      <div class="ci">
+        <app-continuum></app-continuum>
+      </div>
+      <div class="ci">
+        <app-cruisecontrol></app-cruisecontrol>
+      </div>
+    </div>
+    <div fxLayout="column">
+      <div class="ci">
+        <app-jenkins></app-jenkins>
+      </div>
+      <div class="ci">
+        <app-travis></app-travis>
+      </div>
+      <div class="ci">
+        <app-bamboo></app-bamboo>
+      </div>
+      <div class="scm">
+        <app-mercurial></app-mercurial>
+      </div>
+    </div>
+    <div fxLayout="column">
+      <div class="none"></div>
       <div class="scm">
         <app-git></app-git>
       </div>
@@ -16,9 +45,6 @@
       <div class="scm">
         <app-cvs></app-cvs>
       </div>
-      <div class="scm">
-        <app-mercurial></app-mercurial>
-      </div>
     </div>
     <div fxLayout="column">
       <div class="communication">
@@ -28,16 +54,13 @@
         <app-nginx></app-nginx>
       </div>
       <div class="server">
+        <app-wildfire></app-wildfire>
+      </div>
+      <div class="server">
         <app-apache></app-apache>
       </div>
       <div class="server">
         <app-tomcat></app-tomcat>
-      </div>
-      <div class="server">
-        <app-wildfire></app-wildfire>
-      </div>
-      <div class="server">
-        <app-websphere></app-websphere>
       </div>
       <div class="none"></div>
     </div>
@@ -51,6 +74,9 @@
       </div>
       <div class="ops">
         <app-cigo></app-cigo>
+      </div>
+      <div class="server">
+        <app-websphere></app-websphere>
       </div>
     </div>
     <div fxLayout="column">
@@ -81,9 +107,6 @@
       <div class="organization">
         <app-jira></app-jira>
       </div>
-      <div class="quality">
-        <app-metrix-ware></app-metrix-ware>
-      </div>
     </div>
     <div fxLayout="column">
       <div class="quality">
@@ -101,8 +124,34 @@
       <div class="quality">
         <app-kalistick></app-kalistick>
       </div>
+    </div>
+    <div fxLayout="column">
+      <div class="none"></div>
+      <div class="repo">
+        <app-nexus></app-nexus>
+      </div>
+      <div class="repo">
+        <app-artefactory></app-artefactory>
+      </div>
+      <div class="quality">
+        <app-metrix-ware></app-metrix-ware>
+      </div>
+    </div>
+    <div fxLayout="column">
+      <div class="none"></div>
+      <div class="none"></div>
+      <div class="repo">
+        <app-npm></app-npm>
+      </div>
       <div class="quality">
         <app-cast></app-cast>
+      </div>
+    </div>
+    <div fxLayout="column">
+      <div class="none"></div>
+      <div class="none"></div>
+      <div class="repo">
+        <app-dockerhub></app-dockerhub>
       </div>
     </div>
 </div>

@@ -11,11 +11,13 @@ import { Subscription } from 'rxjs/Subscription';
 })
 export class CycleComponent implements OnInit {
 
-  identity: Observable<Identity>;
-
-  constructor(identityService: IdentityService) { }
+  public identity: Identity;
+  constructor(public identityService: IdentityService) {
+    this.identity = identityService.identity;
+  }
 
   ngOnInit() {
+    this.identityService.clean();
   }
 
 }

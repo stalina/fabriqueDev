@@ -1,6 +1,11 @@
-.step-name{
+.step-name-disable{
     color:grey;
     text-align: center;
+}
+.step-name-enable{
+    color:white;
+    text-align: center;
+    height: 0px;
 }
 svg{
     display: block;
