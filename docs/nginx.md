@@ -14,7 +14,7 @@ services:
         ports:
             - 8084:80
         volumes:
-            - /tmp/frabiq/nginx/html:/usr/share/nginx/html 
+            - /tmp/fabriq/nginx/html:/usr/share/nginx/html 
         networks:
             - frabriqueDev  
 

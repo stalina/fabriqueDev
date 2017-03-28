@@ -7,9 +7,9 @@ services:
             - 8080:80
             - 8443:443
         volumes:
-            - /tmp/frabiq/gitlab/config:/etc/gitlab 
-            - /tmp/frabiq/gitlab/logs:/var/log/gitlab 
-            - /tmp/frabiq/gitlab/data:/var/opt/gitlab 
+            - /tmp/fabriq/gitlab/config:/etc/gitlab 
+            - /tmp/fabriq/gitlab/logs:/var/log/gitlab 
+            - /tmp/fabriq/gitlab/data:/var/opt/gitlab 
         networks:
             - frabriqueDev 
 
@@ -18,14 +18,14 @@ services:
         ports:
             - 8081:8080
         volumes:
-            - /tmp/frabiq/jenkins:/var/jenkins_home 
+            - /tmp/fabriq/jenkins:/var/jenkins_home 
         networks:
             - frabriqueDev
 
     nexus:
         image: sonatype/nexus3
         volumes:
-            - /tmp/frabiq/nexus:/nexus-data
+            - /tmp/fabriq/nexus:/nexus-data
         ports:
             - 8082:8081 
         networks:
@@ -37,12 +37,12 @@ services:
             - 8083:4440
             - 8483:4443
         volumes:
-            - /tmp/frabiq/rundeck/etc:/etc/rundeck
-            - /tmp/frabiq/rundeck/var:/var/rundeck
-            - /tmp/frabiq/rundeck/varlog:/var/log/rundeck
-            - /tmp/frabiq/rundeck/plugins:/opt/rundeck-plugins
-            - /tmp/frabiq/rundeck/log:/var/lib/rundeck/logs
-            - /tmp/frabiq/rundeck/data:/var/lib/rundeck/var/storage
+            - /tmp/fabriq/rundeck/etc:/etc/rundeck
+            - /tmp/fabriq/rundeck/var:/var/rundeck
+            - /tmp/fabriq/rundeck/varlog:/var/log/rundeck
+            - /tmp/fabriq/rundeck/plugins:/opt/rundeck-plugins
+            - /tmp/fabriq/rundeck/log:/var/lib/rundeck/logs
+            - /tmp/fabriq/rundeck/data:/var/lib/rundeck/var/storage
         environment:
             - RUNDECK_ADMIN_PASSWORD=admin
         networks:
@@ -53,7 +53,7 @@ services:
         ports:
             - 8084:80
         volumes:
-            - /tmp/frabiq/nginx/html:/usr/share/nginx/html 
+            - /tmp/fabriq/nginx/html:/usr/share/nginx/html 
         networks:
             - frabriqueDev
             
@@ -62,10 +62,10 @@ services:
         ports:
             - 8085:9000
         volumes:
-            - /tmp/frabiq/sonarqube/conf:/opt/sonarqube/conf
-            - /tmp/frabiq/sonarqube/data:/opt/sonarqube/data
-            - /tmp/frabiq/sonarqube/extensions:/opt/sonarqube/extensions
-            - /tmp/frabiq/sonarqube/bundled-plugins:/opt/sonarqube/lib/bundled-plugins
+            - /tmp/fabriq/sonarqube/conf:/opt/sonarqube/conf
+            - /tmp/fabriq/sonarqube/data:/opt/sonarqube/data
+            - /tmp/fabriq/sonarqube/extensions:/opt/sonarqube/extensions
+            - /tmp/fabriq/sonarqube/bundled-plugins:/opt/sonarqube/lib/bundled-plugins
         networks:
             - frabriqueDev  
 
@@ -90,6 +90,17 @@ services:
         image: mattermost/mattermost-preview:3.7
         ports:
             - 8087:8065
+        networks:
+            - frabriqueDev  
+
+    svn:
+        image: marvambass/subversion
+        ports:
+            - 8090:80
+        volumes:
+            - /tmp/fabriq/svn/local:/var/local/svn
+            - /tmp/fabriq/svn/backup:/var/svn-backup
+            - /tmp/fabriq/svn/dav:/etc/apache2/dav_svn/
         networks:
             - frabriqueDev  
  

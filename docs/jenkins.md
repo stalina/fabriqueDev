@@ -16,7 +16,7 @@ services:
         ports:
             - 8081:8080
         volumes:
-            - /tmp/frabiq/jenkins:/var/jenkins_home 
+            - /tmp/fabriq/jenkins:/var/jenkins_home 
         networks:
             - frabriqueDev  
 

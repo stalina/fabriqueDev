@@ -4,7 +4,7 @@ Candidats à la fabrique de dev
 Gestionnaire de source
 ----------------------
 [GitLab](./gitLab.md)   
-svn  
+[Svn](./svn.md)  
 Mercurial  
 CVS  
 bitbucket  
@@ -60,10 +60,10 @@ redmine
 
 Communication
 ----------
-[Mattermost](./mattermost.md)
-zulip
-IRC
-Matrix
+[Mattermost](./mattermost.md)  
+zulip  
+IRC  
+Matrix  
 ...
 
 

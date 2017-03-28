@@ -15,9 +15,9 @@ services:
             - 8080:80
             - 8443:443
         volumes:
-            - /tmp/frabiq/gitlab/config:/etc/gitlab 
-            - /tmp/frabiq/gitlab/logs:/var/log/gitlab 
-            - /tmp/frabiq/gitlab/data:/var/opt/gitlab 
+            - /tmp/fabriq/gitlab/config:/etc/gitlab 
+            - /tmp/fabriq/gitlab/logs:/var/log/gitlab 
+            - /tmp/fabriq/gitlab/data:/var/opt/gitlab 
         networks:
             - frabriqueDev  
 

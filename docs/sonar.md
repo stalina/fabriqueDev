@@ -14,10 +14,10 @@ services:
         ports:
             - 8085:9000
         volumes:
-            - /tmp/frabiq/sonarqube/conf:/opt/sonarqube/conf
-            - /tmp/frabiq/sonarqube/data:/opt/sonarqube/data
-            - /tmp/frabiq/sonarqube/extensions:/opt/sonarqube/extensions
-            - /tmp/frabiq/sonarqube/bundled-plugins:/opt/sonarqube/lib/bundled-plugins
+            - /tmp/fabriq/sonarqube/conf:/opt/sonarqube/conf
+            - /tmp/fabriq/sonarqube/data:/opt/sonarqube/data
+            - /tmp/fabriq/sonarqube/extensions:/opt/sonarqube/extensions
+            - /tmp/fabriq/sonarqube/bundled-plugins:/opt/sonarqube/lib/bundled-plugins
         networks:
             - frabriqueDev  
 

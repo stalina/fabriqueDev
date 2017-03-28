@@ -13,7 +13,7 @@ services:
     nexus:
         image: sonatype/nexus3:3.2.1
         volumes:
-            - "/tmp/frabiq/nexus:/nexus-data"
+            - "/tmp/fabriq/nexus:/nexus-data"
         ports:
             - 8082:8081 
         networks:

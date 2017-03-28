@@ -15,12 +15,12 @@ services:
             - 8083:4440
             - 8483:4443
         volumes:
-            - /tmp/frabiq/rundeck/etc:/etc/rundeck
-            - /tmp/frabiq/rundeck/var:/var/rundeck
-            - /tmp/frabiq/rundeck/varlog:/var/log/rundeck
-            - /tmp/frabiq/rundeck/plugins:/opt/rundeck-plugins
-            - /tmp/frabiq/rundeck/log:/var/lib/rundeck/logs
-            - /tmp/frabiq/rundeck/data:/var/lib/rundeck/var/storage
+            - /tmp/fabriq/rundeck/etc:/etc/rundeck
+            - /tmp/fabriq/rundeck/var:/var/rundeck
+            - /tmp/fabriq/rundeck/varlog:/var/log/rundeck
+            - /tmp/fabriq/rundeck/plugins:/opt/rundeck-plugins
+            - /tmp/fabriq/rundeck/log:/var/lib/rundeck/logs
+            - /tmp/fabriq/rundeck/data:/var/lib/rundeck/var/storage
         environment:
             - RUNDECK_ADMIN_PASSWORD=admin
             - RUNDECK_WITH_SSL=false
