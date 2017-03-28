@@ -103,6 +103,16 @@ services:
             - /tmp/fabriq/svn/dav:/etc/apache2/dav_svn/
         networks:
             - frabriqueDev  
+        
+    bamboo:
+        image: cptactionhank/atlassian-bamboo:5.15.3
+        ports:
+            - 8091:8085
+        volumes:
+            - /tmp/fabriq/bamboo/data:/var/atlassian/bamboo
+            - /tmp/fabriq/bamboo/logs:/opt/atlassian/bamboo/logs
+        networks:
+            - frabriqueDev  
  
 networks:
   frabriqueDev:

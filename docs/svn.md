@@ -1,7 +1,7 @@
 SVN
 ==============
 
-Official docker image : https://hub.docker.com/r/krisdavison/svn-server/
+Docker image : https://hub.docker.com/r/marvambass/subversion/
 
 * Docker compose :
 ```
