@@ -122,6 +122,60 @@ services:
             - /tmp/fabriq/artifactory:/var/opt/jfrog/artifactory
         networks:
             - frabriqueDev  
+
+    gocd-server:
+        image: gocd/gocd-server:v17.3.0
+        ports:
+            - 8093:8153
+            - 8094:8154
+        volumes:
+            - /tmp/fabriq/godata/addons:/godata/addons
+            - /tmp/fabriq/godata/artifacts:/godata/artifacts
+            - /tmp/fabriq/godata/config:/godata/config
+            - /tmp/fabriq/godata/db:/godata/db
+            - /tmp/fabriq/godata/logs:/godata/logs
+            - /tmp/fabriq/godata/plugins:/godata/plugins 
+            - /tmp/fabriq/godata/go:/home/go 
+        networks:
+            - frabriqueDev  
+    gocd-dev:
+        image: gocd/gocd-dev:16.9.0
+        volumes:
+            - /var/run/docker.sock:/var/run/docker.sock
+            - /tmp/fabriq/godata/go-agent/log:/var/log/go-server/
+        links:
+            - gocd-server
+        networks:
+            - frabriqueDev 
+
+    httpd:
+        image: httpd:2.4.25-alpine
+        ports:
+            - 8095:80
+        volumes:
+            - /tmp/fabriq/httpd/html:/usr/local/apache2/htdocs/ 
+        networks:
+            - frabriqueDev 
+        
+    teamscale:
+        image: cqse/teamscale:teamscale_v3.2.0
+        volumes:
+            - /tmp/fabriq/teamscale/storage:/opt/teamscale/storage
+            - /tmp/fabriq/teamscale/logs:/opt/teamscale/logs
+            - /tmp/fabriq/teamscale/backup:/backup
+        ports:
+            - 8096:8080
+        networks:
+            - frabriqueDev 
+
+    jira:
+        image: cptactionhank/atlassian-jira:7.3.3
+        volumes:
+            - /tmp/fabriq/jira/logs:/opt/atlassian/jira/logs
+        ports:
+            - 8097:8080
+        networks:
+            - frabriqueDev 
  
 networks:
   frabriqueDev:

@@ -29,12 +29,12 @@ docker hub
 Ops
 -----
 [Rundeck](./rundeck.md)  NOT FINISHED yet missong project configuration
-cigo  
+[GoCD](./gocd.md)  
 
 Serveur
 ----------
 [Nginx](./nginx.md)
-Apache  
+[Apache HTTPD](./apache.md) 
 tomcat  
 wildfire  
 web sphere  
@@ -42,8 +42,8 @@ web sphere
 Quality
 -------
 [Sonar](./sonar.md)  
+[Teamscale](/teamscale.md)  
 codacy  
-teamscale  
 squale  
 kalistick   
 MetrixWare  
@@ -52,17 +52,17 @@ cast
 Organization
 ------------
 [Wekan](./wekan.md)  
+[Jira](./jira.md)
 team foundation  
 trello  
-jira  
 redmine  
 
 Communication
 ----------
 [Mattermost](./mattermost.md)  
+Matrix
 zulip  
-IRC  
-Matrix  
+IRC   
 ...
 
 
