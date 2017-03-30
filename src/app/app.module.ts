@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { MarkdownModule } from 'angular2-markdown';
 
 import { AppComponent } from './app.component';
 import { GitComponent } from './git/git.component';
@@ -103,7 +104,8 @@ import { CycleComponent } from './cycle/cycle.component';
     FormsModule,
     HttpModule,
     FlexLayoutModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    MarkdownModule.forRoot(),
   ],
   providers: [IdentityService,CheckToolsService],
   bootstrap: [AppComponent]

@@ -3,24 +3,7 @@
     <h4>Rules for Nexus !</h4>
   </div>
   <div class="modal-body">
-    <ngb-tabset>
-      <ngb-tab title="Instructions">
-        <template ngbTabContent>
-          <a href="https://github.com/sameersbn/docker-gitlab">Link to docker</a>
-        </template>
-      </ngb-tab>
-      <ngb-tab title="docker-compose">
-        <template ngbTabContent>
-          <pre class="prettyprint">
-services:
-  redis:
-    restart: always
-    image: sameersbn/redis:latest
-    command:
-        </pre>
-        </template>
-      </ngb-tab>
-    </ngb-tabset>
+    <markdown path="assets/docs/nexus.md"></markdown>
   </div>
   <div class="modal-footer">
     <button type="button" class="btn btn-secondary" (click)="c('Close click')">Close</button>

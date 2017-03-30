@@ -46,6 +46,12 @@ export class ToolComponent {
         return identityService.identity.quality;
       case Tools.NEXUS:
         return identityService.identity.repo;
+      case Tools.ARTEFACTORY:
+        return identityService.identity.repo;
+      case Tools.NPM:
+        return identityService.identity.repo;              
+      case Tools.DOCKERHUB:
+        return identityService.identity.repo;       
       default:
         return false;
     }
@@ -75,6 +81,15 @@ export class ToolComponent {
         identityService.identity.quality = true;
         break;
       case Tools.NEXUS:
+        identityService.identity.repo = true;
+        break;
+      case Tools.ARTEFACTORY:
+        identityService.identity.repo = true;
+        break;
+      case Tools.NPM:
+        identityService.identity.repo = true;
+        break;                
+      case Tools.DOCKERHUB:
         identityService.identity.repo = true;
         break;
     }
