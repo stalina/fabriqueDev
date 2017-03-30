@@ -1,13 +1,13 @@
 <ng-template #content let-c="close" let-d="dismiss">
   <div class="modal-header">
-    <h4>Rules for Nexus !</h4>
+    <h4>Rules for install {{name}} !</h4>
   </div>
   <div class="modal-body">
-    <markdown path="assets/docs/nexus.md"></markdown>
+    <markdown path="assets/docs/{{name}}.md"></markdown>
   </div>
   <div class="modal-footer">
     <button type="button" class="btn btn-secondary" (click)="c('Close click')">Close</button>
   </div>
 </ng-template>
 
-<img (click)="open(content)" [ngClass]="(health==true)?'tools':'disabled tools'" width="70px" src="assets/formules/nexus.svg">
+<img (click)="open(content)" [ngClass]="(health==true)?'tools':'disabled tools'" width="70px" src="assets/formules/{{name}}.svg">

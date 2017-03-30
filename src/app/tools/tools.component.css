@@ -1,5 +1,4 @@
 .disabled{
-    color: pink;
     -webkit-animation-name: clignote;
     -webkit-animation-duration: 2s;
     -webkit-animation-iteration-count:infinite;
