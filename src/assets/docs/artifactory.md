@@ -5,7 +5,8 @@ docker image : https://bintray.com/jfrog/reg2/jfrog:artifactory-oss
 
 
 * Docker compose :
-```
+
+```yml
 version: "3"
 
 services:

@@ -5,7 +5,8 @@ Official docker image : https://hub.docker.com/_/nginx/
 
 
 * Docker compose :
-```
+
+```yml
 version: "3"
 
 services:

@@ -5,7 +5,8 @@ Official docker image : https://hub.docker.com/r/jordan/rundeck/
 
 
 * Docker compose :
-```
+
+```yml
 version: "3"
 
 services:

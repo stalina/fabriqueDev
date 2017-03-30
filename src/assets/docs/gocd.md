@@ -6,7 +6,8 @@ https://hub.docker.com/r/gocd/gocd-server/
 https://hub.docker.com/r/gocd/gocd-dev/
 
 * Docker compose :
-```
+
+```yml
 version: "3"
 
 services:

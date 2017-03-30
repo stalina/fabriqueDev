@@ -4,7 +4,8 @@ SVN
 Docker image : https://hub.docker.com/r/marvambass/subversion/
 
 * Docker compose :
-```
+
+```yml
 version: "3"
 
 services:

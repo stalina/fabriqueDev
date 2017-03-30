@@ -4,7 +4,8 @@ Mattermost
 Official docker image : https://hub.docker.com/r/mattermost/platform/
 
 * Docker compose :
-```
+
+```yml
 version: "3"
 
 services:

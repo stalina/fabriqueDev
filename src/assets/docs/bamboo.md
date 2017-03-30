@@ -6,7 +6,8 @@ docker image : https://hub.docker.com/r/cptactionhank/atlassian-bamboo/
 necessite une clef de licence d'évaluation
 
 * Docker compose :
-```
+
+```yml
 version: "3"
 
 services:

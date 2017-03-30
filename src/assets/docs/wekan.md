@@ -4,7 +4,8 @@ Wekan
 Official docker image : https://hub.docker.com/r/mquandalle/wekan/
 
 * Docker compose :
-```
+
+```yml
 version: "3"
 
 services:

@@ -7,7 +7,8 @@ Official docker image : https://hub.docker.com/_/jenkins/
 Faire un `mkdir /tmp/frabiq/jenkins` et `sudo chown 1000 /tmp/frabiq/jenkins` pour autoriser jenkins a écrire sur le volume  
 
 * Docker compose :
-```
+
+```yml
 version: "3"
 
 services:
