@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Tools } from '../tools'
-import { ToolComponent } from '../tool-component'
 import { IdentityService } from '../identity.service';
 import { CheckToolsService } from '../check-tools.service'
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
