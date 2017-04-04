@@ -5,10 +5,11 @@ Gestionnaire de source
 ----------------------
 [GitLab](./gitLab.md)   
 [Svn](./svn.md)  
-Mercurial  
+[Mercurial](./mercurial.md)  
 CVS  
 bitbucket  
 bazaar  
+
 
 CI
 -----
