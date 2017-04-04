@@ -6,9 +6,7 @@ Gestionnaire de source
 [GitLab](./gitLab.md)   
 [Svn](./svn.md)  
 [Mercurial](./mercurial.md)  
-CVS  
-bitbucket  
-bazaar  
+[bitbucket](./bitbucket.md)   
 
 
 CI

@@ -14,7 +14,7 @@ services:
     mercurial:
         image: miguillo/mercurial-server
         ports:
-            - 22222:2222
+            - 8100:2222
         volumes:
             - /tmp/fabriq/mercurial/:/var/lib/mercurial-server/repos
         networks:
