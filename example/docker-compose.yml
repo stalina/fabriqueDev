@@ -224,6 +224,16 @@ services:
             - 8200:7990
         networks:
             - frabriqueDev 
+        
+    teamcity:
+        image: jetbrains/teamcity-server:10.0.5
+        volumes:
+            - /tmp/fabriq/teamcity/home:/data/teamcity_server/datadir
+            - /tmp/fabriq/teamcity/logs:/opt/teamcity/logs
+        ports:
+            - 8101:8111
+        networks:
+            - frabriqueDev  
  
 networks:
   frabriqueDev:

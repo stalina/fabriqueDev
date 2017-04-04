@@ -12,9 +12,8 @@ Gestionnaire de source
 CI
 -----
 [Jenkins](./jenkins.md) NOT FINISHED yet missing build system    
-[Bamboo](./bamboo.md)  
-codeship  
-teamcity  
+[Bamboo](./bamboo.md)    
+[teamcity](./teamcity.md)  
 continuum  
 cruisecontrol  
 
@@ -22,8 +21,8 @@ Repo
 -------
 [Nexus](./nexus.md) NOT FINISHED yet missing jenkins configuration + push   
 [Artifactory](./artifactory.md)  
+[docker hub](./dockerhub.md)  
 npm   
-docker hub  
 
 Ops
 -----
@@ -52,6 +51,7 @@ Organization
 ------------
 [Wekan](./wekan.md)  
 [Jira](./jira.md)
+[redmine](./redmine.md)
 team foundation  
 trello  
 redmine  
