@@ -27,6 +27,15 @@ services:
         networks:
             - frabriqueDev
 
+    dockerhub:
+        image: registry:2
+        ports:
+            - 5000:5000
+        volumes:
+            - /tmp/fabriq/dockerregistry/data:/var/lib/registry
+        networks:
+            - frabriqueDev   
+
     rundeck:
         image: jordan/rundeck
         ports:
@@ -64,6 +73,30 @@ services:
             - /tmp/fabriq/sonarqube/bundled-plugins:/opt/sonarqube/lib/bundled-plugins
         networks:
             - frabriqueDev  
+
+    redminedb:
+        image: mariadb
+        environment:
+            MYSQL_ROOT_PASSWORD: example
+            MYSQL_DATABASE: redmine
+        volumes:
+            - /tmp/fabriq/redmine/db:/var/lib/mysql
+        networks:
+            - frabriqueDev
+
+    redmine:
+        image: redmine
+        ports:
+           - 3000:3000
+        environment:
+           REDMINE_DB_MYSQL: redminedb
+           REDMINE_DB_PASSWORD: example
+        volumes:
+            - /tmp/fabriq/redmine/files:/usr/src/redmine/files        
+        depends_on:
+           - redminedb
+        networks:
+            - frabriqueDev
 
     wekan:
         image: mquandalle/wekan:latest

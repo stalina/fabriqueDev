@@ -36,7 +36,7 @@ export class ToolsComponent implements OnInit {
     switch (tools) {
       case Tools.MERCURIAL:
         return identityService.identity.scm;
-      case Tools.CVS:
+      case Tools.SVN:
         return identityService.identity.scm;
       case Tools.BITBUCKET:
         return identityService.identity.scm;
@@ -76,7 +76,7 @@ export class ToolsComponent implements OnInit {
         return identityService.identity.communication;
       case Tools.ZULIP:
         return identityService.identity.communication;
-      case Tools.CIGO:
+      case Tools.GOCD:
         return identityService.identity.ops;
       case Tools.RUNDECK:
         return identityService.identity.ops;
@@ -108,7 +108,7 @@ export class ToolsComponent implements OnInit {
         return identityService.identity.quality;
       case Tools.NEXUS:
         return identityService.identity.repo;
-      case Tools.ARTEFACTORY:
+      case Tools.ARTIFACTORY:
         return identityService.identity.repo;
       case Tools.NPM:
         return identityService.identity.repo;
@@ -124,7 +124,7 @@ export class ToolsComponent implements OnInit {
       case Tools.MERCURIAL:
         identityService.identity.scm = true;
         break;
-      case Tools.CVS:
+      case Tools.SVN:
         identityService.identity.scm = true;
         break;
       case Tools.BITBUCKET:
@@ -181,7 +181,7 @@ export class ToolsComponent implements OnInit {
       case Tools.ZULIP:
         identityService.identity.communication = true;
         break;
-      case Tools.CIGO:
+      case Tools.GOCD:
         identityService.identity.ops = true;
         break;
       case Tools.RUNDECK:
@@ -226,7 +226,7 @@ export class ToolsComponent implements OnInit {
       case Tools.NEXUS:
         identityService.identity.repo = true;
         break;
-      case Tools.ARTEFACTORY:
+      case Tools.ARTIFACTORY:
         identityService.identity.repo = true;
         break;
       case Tools.NPM:

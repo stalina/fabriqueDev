@@ -1,4 +1,4 @@
-cdGo
+gocd
 ==============
 
 Official Docker image :  

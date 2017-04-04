@@ -10,4 +10,4 @@
   </div>
 </ng-template>
 
-<img (click)="open(content)" [ngClass]="(health==true)?'tools':'disabled tools'" width="70px" src="assets/formules/{{name}}.svg">
+<img (click)="open(content)" [ngClass]="(health==true)?'tools':'disabled tools'" width="70px" src="assets/formules/{{name}}.svg" placement="top" ngbTooltip="{{name}}">
