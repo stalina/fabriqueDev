@@ -3,7 +3,7 @@ Nexus
 
 Official docker image : https://hub.docker.com/r/sonatype/nexus3/
 
-Faire un `sudo mkdir /tmp/frabiq/nexus` et `sudo chown 200 /tmp/frabiq/nexus` pour autoriser jenkins a écrire sur le volume  
+Faire un `sudo mkdir -p /tmp/fabriq/nexus` et `sudo chown 200 /tmp/fabriq/nexus` pour autoriser jenkins a écrire sur le volume  
 
 * Docker compose :
 

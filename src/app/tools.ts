@@ -1,11 +1,11 @@
 export enum Tools {
-    GIT = <any>"http://CI_IP:8116/health",
+    GIT = <any>"http://CI_IP:8080/",
     SVN = <any>"http://CI_IP:8115/health",
     MERCURIAL = <any>"http://CI_IP:8117/health",
     CVS = <any>"http://CI_IP:8118/health",
     BITBUCKET = <any>"http://CI_IP:8119/health",
     BAZAAR = <any>"http://CI_IP:8120/health",
-    JENKINS = <any>"http://CI_IP:8081/",
+    JENKINS = <any>"http://CI_IP:8081/login",
     NEXUS = <any>"http://CI_IP:8082/",
     RUNDECK = <any>"http://CI_IP:8083/",
     NGINX = <any>"http://CI_IP:8084/",
