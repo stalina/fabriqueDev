@@ -23,7 +23,7 @@ export enum Tools {
     DOCKERHUB = <any>"http://CI_IP:5000/",
     GOCD = <any>"http://CI_IP:8097/health",
     APACHE = <any>"http://CI_IP:8098/health",
-    TOMCAT = <any>"http://CI_IP:8099/health",
+    TOMCAT = <any>"http://CI_IP:9090/health",
     WILDFIRE = <any>"http://CI_IP:8100/health",
     WEBSPHERE = <any>"http://CI_IP:8101/health",
     CODACY = <any>"http://CI_IP:8102/health",

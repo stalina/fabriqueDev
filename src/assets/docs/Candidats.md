@@ -21,8 +21,8 @@ Repo
 -------
 [Nexus](./nexus.md) NOT FINISHED yet missing jenkins configuration + push   
 [Artifactory](./artifactory.md)  
-[docker hub](./dockerhub.md)  
 npm   
+[DockerHub](./dockerhub.md)  
 
 Ops
 -----
@@ -33,7 +33,7 @@ Serveur
 ----------
 [Nginx](./nginx.md)
 [Apache HTTPD](./apache.md) 
-tomcat  
+[Tomcat](./tomcat.md)
 wildfire  
 web sphere  
 
@@ -54,7 +54,8 @@ Organization
 [redmine](./redmine.md)
 team foundation  
 trello  
-redmine  
+[Redmine](./redmine.md)
+  
 
 Communication
 ----------
