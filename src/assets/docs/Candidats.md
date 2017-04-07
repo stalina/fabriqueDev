@@ -41,8 +41,7 @@ web sphere
 Quality
 -------
 [Sonar](./sonar.md)  
-[Teamscale](/teamscale.md)  
-codacy  
+[Teamscale](/teamscale.md)    
 squale  
 kalistick     
 cast  
