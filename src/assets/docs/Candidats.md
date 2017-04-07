@@ -44,8 +44,7 @@ Quality
 [Teamscale](/teamscale.md)  
 codacy  
 squale  
-kalistick   
-MetrixWare  
+kalistick     
 cast  
 
 Organization
