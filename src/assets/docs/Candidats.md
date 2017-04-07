@@ -34,6 +34,7 @@ Serveur
 [Nginx](./nginx.md)
 [Apache HTTPD](./apache.md) 
 [Tomcat](./tomcat.md)
+[Jetty](./jetty.md)
 wildfire  
 web sphere  
 
@@ -52,18 +53,15 @@ Organization
 [Wekan](./wekan.md)  
 [Jira](./jira.md)
 [redmine](./redmine.md)
-team foundation  
-trello  
 [Redmine](./redmine.md)
-  
+[Mantis](.mantis.md)  
 
 Communication
 ----------
 [Mattermost](./mattermost.md)  
-Matrix
-zulip  
-IRC   
-...
+[zulip](./zulip.md)  
+[RocketChat](./rocketChat.md)   
+
 
 
 
