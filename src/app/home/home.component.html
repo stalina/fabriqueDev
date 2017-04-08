@@ -44,11 +44,25 @@
     <button type="button" class="btn btn-secondary" (click)="c('Close click')">Close</button>
   </div>
 </ng-template>
-<div fxLayout="row" fxLayoutAlign="none none" >
+<ng-template #swarm let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4>Rules for using Docker Swarm !</h4>
+  </div>
+  <div class="modal-body">
+    <markdown path="assets/docs/dockerswarm.md"></markdown>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="c('Close click')">Close</button>
+  </div>
+</ng-template>
+<div fxLayout="row" fxLayoutAlign="none none">
   <div>
     <img (click)="open(content)" width="100px" src="assets/home.png">
   </div>
   <div>
     <img (click)="open(slider)" width="100px" src="assets/docker.png">
+  </div>
+  <div>
+    <img (click)="open(swarm)" width="100px" src="assets/dockerswarm.png">
   </div>
 </div>

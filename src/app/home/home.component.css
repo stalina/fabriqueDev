@@ -8,6 +8,9 @@
 .language-yml{
     color: wheat;
 }
+.language-shell{
+    color: white !important;
+}
 #imgPresentation{
     height: 500px !important;
 }
