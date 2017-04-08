@@ -27,14 +27,14 @@ services:
         links:
             - db:db
         ports:
-            - 3000:3000
+            - 3003:3000
         networks:
             - frabriqueDev  
 
     hubot:
         image: rocketchat/hubot-rocketchat:v0.1.4
         environment:
-            - ROCKETCHAT_URL=165.114.165.21:3000
+            - ROCKETCHAT_URL=rocketchat:3000
             - ROCKETCHAT_ROOM=GENERAL
             - ROCKETCHAT_USER=Botname
             - ROCKETCHAT_PASSWORD=BotPassw0rd

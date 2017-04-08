@@ -1,6 +1,5 @@
 #breakingbad{
-  margin-top: 50vh; 
-  transform: translateY(-50%);
+    margin-top: 10vh; 
     position: relative;
 }
 .disabled{

@@ -12,7 +12,7 @@ services:
     mattermost:
         image: mattermost/mattermost-preview:3.7
         ports:
-            - 8087:8065
+            - 8077:8065
         networks:
             - frabriqueDev  
 

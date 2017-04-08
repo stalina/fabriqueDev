@@ -3,64 +3,52 @@ Candidats à la fabrique de dev
 
 Gestionnaire de source
 ----------------------
-[GitLab](./gitLab.md)   
-[Svn](./svn.md)  
-[Mercurial](./mercurial.md)  
-[bitbucket](./bitbucket.md)   
-
+[GitLab](./gitLab.md)   8080 8443
+[Svn](./svn.md)  8090
+[Mercurial](./mercurial.md)  8100
+[bitbucket](./bitbucket.md)   8200
 
 CI
 -----
-[Jenkins](./jenkins.md) NOT FINISHED yet missing build system    
-[Bamboo](./bamboo.md)    
-[teamcity](./teamcity.md)  
-continuum  
-cruisecontrol  
+[Jenkins](./jenkins.md) NOT FINISHED yet missing build system   8081 
+[Bamboo](./bamboo.md)    8091
+[teamcity](./teamcity.md)   8101
 
 Repo
 -------
-[Nexus](./nexus.md) NOT FINISHED yet missing jenkins configuration + push   
-[Artifactory](./artifactory.md)  
-npm   
-[DockerHub](./dockerhub.md)  
+[Nexus](./nexus.md) NOT FINISHED yet missing jenkins configuration + push   8082 
+[Artifactory](./artifactory.md)  8092
+[Synopia](./synopia.md)  4873 
+[DockerHub](./dockerhub.md)  5000
 
 Ops
 -----
-[Rundeck](./rundeck.md)  NOT FINISHED yet missong project configuration
-[GoCD](./gocd.md)  
+[Rundeck](./rundeck.md)  NOT FINISHED yet missong project configuration 8083 8483
+[GoCD](./gocd.md)  8093 8094
 
 Serveur
 ----------
-[Nginx](./nginx.md)
-[Apache HTTPD](./apache.md) 
-[Tomcat](./tomcat.md)
-[Jetty](./jetty.md)
-wildfire  
-web sphere  
+[Nginx](./nginx.md) 8084
+[Apache HTTPD](./apache.md)  8095
+[Tomcat](./tomcat.md) 9090
+[Jetty](./jetty.md) 8087 8088
+[WebSphere](./websphere.md) 9080 9443
 
 Quality
 -------
-[Sonar](./sonar.md)  
-[Teamscale](/teamscale.md)    
-squale  
-kalistick     
-cast  
+[Sonar](./sonar.md)  8085
+[Teamscale](./teamscale.md)   8096 
+
 
 Organization
 ------------
-[Wekan](./wekan.md)  
-[Jira](./jira.md)
-[redmine](./redmine.md)
-[Redmine](./redmine.md)
-[Mantis](.mantis.md)  
+[Wekan](./wekan.md)  8086
+[Jira](./jira.md) 8097
+[Redmine](./redmine.md) 3000
+[Mantis](./mantis.md)   8989
 
 Communication
 ----------
-[Mattermost](./mattermost.md)  
-[zulip](./zulip.md)  
-[RocketChat](./rocketChat.md)   
-
-
-
-
-
+[Mattermost](./mattermost.md) 8077 
+[zulip](./zulip.md)  7443 8383
+[RocketChat](./rocketChat.md)   3003 3001

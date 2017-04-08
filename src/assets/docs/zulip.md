@@ -43,7 +43,7 @@ services:
         image: "quay.io/galexrt/zulip:1.5.1-5"
         ports:
             - "8383:80"
-            - "8483:443"
+            - "7443:443"
         environment:
             DB_HOST: "database"
             DB_USER: "zulip"
