@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component,ViewEncapsulation, Input, OnInit } from '@angular/core';
 import { Tools } from '../tools'
 import { IdentityService } from '../identity.service';
 import { CheckToolsService } from '../check-tools.service'
@@ -8,7 +8,8 @@ import { Observable } from 'rxjs/Rx';
 @Component({
   selector: 'app-tools',
   templateUrl: './tools.component.html',
-  styleUrls: ['./tools.component.css']
+  styleUrls: ['./tools.component.css'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class ToolsComponent implements OnInit {
   health = false;
@@ -29,7 +30,7 @@ export class ToolsComponent implements OnInit {
   }
 
   open(content) {
-    this.modalService.open(content);
+    this.modalService.open(content,{ windowClass: 'dark-modal',size: 'lg' });
   }
 
   private isEnable(tools: Tools, identityService: IdentityService) {

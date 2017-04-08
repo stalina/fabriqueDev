@@ -14,4 +14,41 @@
     <button type="button" class="btn btn-secondary" (click)="c('Close click')">Close</button>
   </div>
 </ng-template>
-<img (click)="open(content)" width="150px" src="assets/home.png">
+<ng-template #slider let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4>Docker Slider</h4>
+  </div>
+  <div class="modal-body">
+    <ngb-carousel>
+      <template ngbSlide>
+        <img id="imgPresentation" src="assets/presentation/docker1.svg">
+      </template>
+      <template ngbSlide>
+        <img id="imgPresentation" src="assets/presentation/docker2.svg">
+      </template>
+      <template ngbSlide>
+        <img id="imgPresentation" src="assets/presentation/docker3.svg">
+      </template>
+      <template ngbSlide>
+        <img id="imgPresentation" src="assets/presentation/docker4.svg">
+      </template>
+      <template ngbSlide>
+        <img id="imgPresentation" src="assets/presentation/docker5.svg">
+      </template>
+      <template ngbSlide>
+        <img id="imgPresentation" src="assets/presentation/docker6.svg">
+      </template>
+    </ngb-carousel>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="c('Close click')">Close</button>
+  </div>
+</ng-template>
+<div fxLayout="row" fxLayoutAlign="none none" >
+  <div>
+    <img (click)="open(content)" width="100px" src="assets/home.png">
+  </div>
+  <div>
+    <img (click)="open(slider)" width="100px" src="assets/docker.png">
+  </div>
+</div>

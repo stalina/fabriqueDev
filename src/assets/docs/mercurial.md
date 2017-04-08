@@ -7,7 +7,8 @@ Before launch : `docker run -v /tmp/fabriq/mercurial:/var/lib/mercurial-server/r
 
 
 * Docker compose :
-```
+
+```yml
 version: "3"
 
 services:

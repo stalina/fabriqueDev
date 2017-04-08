@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
   constructor(private identityService: IdentityService, private modalService: NgbModal) {
   }
   open(content) {
-    this.modalService.open(content);
+    this.modalService.open(content,{ windowClass: 'dark-modal',size: 'lg' });
   }
   save() {
     this.identityService.save();

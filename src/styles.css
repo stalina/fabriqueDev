@@ -9,3 +9,6 @@ html {
   -o-background-size: cover;
   background-size: cover;
 }
+.carousel-item{
+    height: 500px !important;
+}
