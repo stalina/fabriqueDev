@@ -14,23 +14,16 @@ services:
         image: jordan/rundeck:2.7.3
         ports:
             - 8083:4440
-            - 8483:4443
         volumes:
-            - /tmp/fabriq/rundeck/etc:/etc/rundeck
-            - /tmp/fabriq/rundeck/var:/var/rundeck
-            - /tmp/fabriq/rundeck/varlog:/var/log/rundeck
-            - /tmp/fabriq/rundeck/plugins:/opt/rundeck-plugins
-            - /tmp/fabriq/rundeck/log:/var/lib/rundeck/logs
-            - /tmp/fabriq/rundeck/data:/var/lib/rundeck/var/storage
+            - /home/walter/fabriq/rundeck/etc:/etc/rundeck
+            - /home/walter/fabriq/rundeck/var:/var/rundeck
+            - /home/walter/fabriq/rundeck/varlog:/var/log/rundeck
+            - /home/walter/fabriq/rundeck/plugins:/opt/rundeck-plugins
+            - /home/walter/fabriq/rundeck/log:/var/lib/rundeck/logs
+            - /home/walter/fabriq/rundeck/data:/var/lib/rundeck/var/storage
         environment:
             - RUNDECK_ADMIN_PASSWORD=admin
-            - RUNDECK_WITH_SSL=false
-        networks:
-            - frabriqueDev  
-
-networks:
-  frabriqueDev:
-    driver: bridge
+            - SERVER_URL=http://localhost:8083
 ```
 
 * connectez vous sur 

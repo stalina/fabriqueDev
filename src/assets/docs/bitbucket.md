@@ -13,15 +13,10 @@ services:
     bitbucket:
         image: cptactionhank/atlassian-bitbucket:4.14.4
         volumes:
-            - /tmp/fabriq/bitbucket/home:/var/atlassian/bitbucket
-            - /tmp/fabriq/bitbucket/logs:/opt/atlassian/bitbucket/logs
+            - /home/walter/fabriq/bitbucket/home:/var/atlassian/bitbucket
+            - /home/walter/fabriq/bitbucket/logs:/opt/atlassian/bitbucket/logs
         ports:
             - 8200:7990
-        networks:
-            - frabriqueDev 
 
-networks:
-  frabriqueDev:
-    driver: bridge
 ```
 

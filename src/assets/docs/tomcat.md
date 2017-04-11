@@ -10,7 +10,7 @@ version: "3"
 
 services:
     tomcat:
-        image: tomcat:9-alpine
+        image: tomcat:9
         ports:
             - 9090:8080
         volumes:

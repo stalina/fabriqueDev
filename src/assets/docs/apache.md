@@ -11,16 +11,10 @@ version: "3"
 
 services:
     httpd:
-        image: httpd:2.4.25-alpine
+        image: httpd:2.4.25
         ports:
             - 8095:80
         volumes:
-            - /tmp/fabriq/httpd/html:/usr/local/apache2/htdocs/ 
-        networks:
-            - frabriqueDev  
-
-networks:
-  frabriqueDev:
-    driver: bridge
+            - /home/walter/fabriq/httpd/html:/usr/local/apache2/htdocs/ 
 ```
 

@@ -15,9 +15,8 @@ services:
             MYSQL_ROOT_PASSWORD: example
             MYSQL_DATABASE: redmine
         volumes:
-            - /tmp/fabriq/redmine/db:/var/lib/mysql
-        networks:
-            - frabriqueDev
+            - /home/walter/fabriq/redmine/db:/var/lib/mysql
+
 
     redmine:
         image: redmine
@@ -27,15 +26,10 @@ services:
            REDMINE_DB_MYSQL: redminedb
            REDMINE_DB_PASSWORD: example
         volumes:
-            - /tmp/fabriq/redmine/files:/usr/src/redmine/files
+            - /home/walter/fabriq/redmine/files:/usr/src/redmine/files
         depends_on:
            - redminedb
-        networks:
-            - frabriqueDev
 
-networks:
-  frabriqueDev:
-    driver: bridge
 ```
 
 * connectez vous sur 

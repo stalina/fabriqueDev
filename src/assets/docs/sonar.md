@@ -11,20 +11,15 @@ version: "3"
 
 services:
     sonarqube:
-        image: sonarqube:6.3-alpine
+        image: sonarqube:6.3
         ports:
             - 8085:9000
         volumes:
-            - /tmp/fabriq/sonarqube/conf:/opt/sonarqube/conf
-            - /tmp/fabriq/sonarqube/data:/opt/sonarqube/data
-            - /tmp/fabriq/sonarqube/extensions:/opt/sonarqube/extensions
-            - /tmp/fabriq/sonarqube/bundled-plugins:/opt/sonarqube/lib/bundled-plugins
-        networks:
-            - frabriqueDev  
+            - /home/walter/fabriq/sonarqube/conf:/opt/sonarqube/conf
+            - /home/walter/fabriq/sonarqube/data:/opt/sonarqube/data
+            - /home/walter/fabriq/sonarqube/extensions:/opt/sonarqube/extensions
+            - /home/walter/fabriq/sonarqube/bundled-plugins:/opt/sonarqube/lib/bundled-plugins
 
-networks:
-  frabriqueDev:
-    driver: bridge
 ```
 
 * connectez vous sur 

@@ -10,7 +10,7 @@ version: "3"
 
 services:
     jetty:
-        image: jetty:9.4.3-alpine
+        image: jetty:9.4.3
         ports:
             - 8087:8080
             - 8088:8443

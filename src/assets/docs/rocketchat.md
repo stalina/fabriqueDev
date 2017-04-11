@@ -12,11 +12,9 @@ services:
     db:
         image: mongo
         volumes:
-            - /tmp/fabriq/rocketchat/data/runtime/db:/data/db
-            - /tmp/fabriq/rocketchat/data/dump:/dump
+            - /home/walter/fabriq/rocketchat/data/runtime/db:/data/db
+            - /home/walter/fabriq/rocketchat/data/dump:/dump
         command: mongod --smallfiles
-        networks:
-            - frabriqueDev  
 
     rocketchat:
         image: rocketchat/rocket.chat:latest
@@ -28,8 +26,6 @@ services:
             - db:db
         ports:
             - 3003:3000
-        networks:
-            - frabriqueDev  
 
     hubot:
         image: rocketchat/hubot-rocketchat:v0.1.4
@@ -45,11 +41,5 @@ services:
         # this is used to expose the hubot port for notifications on the host on port 3001, e.g. for hubot-jenkins-notifier
         ports:
             - 3001:8080
-        networks:
-            - frabriqueDev  
-
-networks:
-  frabriqueDev:
-    driver: bridge
 
 ```

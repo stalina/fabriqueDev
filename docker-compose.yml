@@ -1,0 +1,26 @@
+version: "3"
+
+services:
+    gocd-server:
+        image: gocd/gocd-server:v17.3.0
+        ports:
+            - 8093:8153
+            - 8094:8154
+        volumes:
+            - /tmp/home/walter/fabriq/godata/addons:/godata/addons
+            - /tmp/home/walter/fabriq/godata/artifacts:/godata/artifacts
+            - /tmp/home/walter/fabriq/godata/config:/godata/config
+            - /tmp/home/walter/fabriq/godata/db:/godata/db
+            - /tmp/home/walter/fabriq/godata/logs:/godata/logs
+            - /tmp/home/walter/fabriq/godata/plugins:/godata/plugins
+            - /tmp/home/walter/fabriq/godata/go:/home/go
+    gocd-agent:
+        image: gocd/gocd-agent-debian-8:v17.3.0
+        volumes:
+            - /tmp/home/walter/fabriq/godata/go-agent/log:/var/log/go-server/
+        links:
+            - gocd-server
+        environment:
+            - GO_SERVER_URL=http://gocd-server:8153/go
+            - AGENT_AUTO_REGISTER_KEY=731504ce-2e15-4e67-85b8-8d47e4a5f254
+            - AGENT_AUTO_REGISTER_HOSTNAME=myagent

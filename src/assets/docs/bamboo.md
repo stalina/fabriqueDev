@@ -16,12 +16,7 @@ services:
         ports:
             - 8091:8085
         volumes:
-            - /tmp/fabriq/bamboo/data:/var/atlassian/bamboo
-            - /tmp/fabriq/bamboo/logs:/opt/atlassian/bamboo/logs
-        networks:
-            - frabriqueDev   
+            - /home/walter/fabriq/bamboo/data:/var/atlassian/bamboo
+            - /home/walter/fabriq/bamboo/logs:/opt/atlassian/bamboo/logs
 
-networks:
-  frabriqueDev:
-    driver: bridge
 ```

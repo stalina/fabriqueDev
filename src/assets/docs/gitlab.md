@@ -12,19 +12,15 @@ version: "3"
 services:
     gitlab:
         image: gitlab/gitlab-ce:9.0.0-ce.0
+        hostname: <your_ci_uri>
         ports:
             - 8080:80
             - 8443:443
         volumes:
-            - /tmp/fabriq/gitlab/config:/etc/gitlab 
-            - /tmp/fabriq/gitlab/logs:/var/log/gitlab 
-            - /tmp/fabriq/gitlab/data:/var/opt/gitlab 
-        networks:
-            - frabriqueDev  
+            - /home/walter/fabriq/gitlab/config:/etc/gitlab 
+            - /home/walter/fabriq/gitlab/logs:/var/log/gitlab 
+            - /home/walter/fabriq/gitlab/data:/var/opt/gitlab 
 
-networks:
-  frabriqueDev:
-    driver: bridge
 ```
 
 * Se connecter à :

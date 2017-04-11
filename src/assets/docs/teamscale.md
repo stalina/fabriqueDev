@@ -13,15 +13,9 @@ services:
     teamscale:
         image: cqse/teamscale:teamscale_v3.2.0
         volumes:
-            - /tmp/fabriq/teamscale/storage:/opt/teamscale/storage
-            - /tmp/fabriq/teamscale/backup:/backup
+            - /home/walter/fabriq/teamscale/storage:/opt/teamscale/storage
+            - /home/walter/fabriq/teamscale/backup:/backup
         ports:
             - 8096:8080
-        networks:
-            - frabriqueDev  
-
-networks:
-  frabriqueDev:
-    driver: bridge
 ```
 

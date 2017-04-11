@@ -14,11 +14,6 @@ services:
         ports:
             - 5000:5000
         volumes:
-            - /tmp/fabriq/dockerregistry/data:/var/lib/registry
-        networks:
-            - frabriqueDev   
+            - /home/walter/fabriq/dockerregistry/data:/var/lib/registry
 
-networks:
-  frabriqueDev:
-    driver: bridge
 ```

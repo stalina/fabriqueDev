@@ -16,14 +16,12 @@ services:
             POSTGRES_USER: zulip
             POSTGRES_PASSWORD: zulip
         volumes:
-            - "/tmp/fabriq/zulip/postgresql/data:/var/lib/postgresql/data:rw"
-        networks:
-            - frabriqueDev  
+            - "/home/walter/fabriq/zulip/postgresql/data:/var/lib/postgresql/data:rw"
+
     memcached:
         image: "quay.io/sameersbn/memcached:latest"
         restart: always
-        networks:
-            - frabriqueDev  
+
     rabbitmq:
         image: "rabbitmq:3.5.5"
         hostname: zulip-rabbit
@@ -31,14 +29,12 @@ services:
         environment:
             RABBITMQ_DEFAULT_USER: "zulip"
             RABBITMQ_DEFAULT_PASS: "zulip"
-        networks:
-            - frabriqueDev  
+ 
     redis:
         image: "quay.io/sameersbn/redis:latest"
         volumes:
-            - "/tmp/fabriq/zulip/redis:/var/lib/redis:rw"
-        networks:
-            - frabriqueDev  
+            - "/home/walter/fabriq/zulip/redis:/var/lib/redis:rw"
+
     zulip:
         image: "quay.io/galexrt/zulip:1.5.1-5"
         ports:
@@ -74,11 +70,6 @@ services:
             ZULIP_USER_DOMAIN: "example.com"
             ZULIP_USER_FULLNAME: "Zulip Example User"
         volumes:
-            - "/tmp/fabriq/zulip/zulip:/data:rw"
-        networks:
-            - frabriqueDev  
+            - "/home/walter/fabriq/zulip/zulip:/data:rw"
 
-networks:
-  frabriqueDev:
-    driver: bridge
 ```

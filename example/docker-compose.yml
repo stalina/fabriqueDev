@@ -10,18 +10,18 @@ services:
             - frabriqueDev 
 
     jenkins:
-        image: jenkins:2.32.3-alpine
+        image: jenkins:2.32.3
         ports:
             - 8081:8080
         volumes:
-            - /tmp/fabriq/jenkins:/var/jenkins_home 
+            - /home/walter/fabriq/jenkins:/var/jenkins_home 
         networks:
             - frabriqueDev
 
     nexus:
         image: sonatype/nexus3
         volumes:
-            - /tmp/fabriq/nexus:/nexus-data
+            - /home/walter/fabriq/nexus:/nexus-data
         ports:
             - 8082:8081 
         networks:
@@ -32,7 +32,7 @@ services:
         ports:
             - 5000:5000
         volumes:
-            - /tmp/fabriq/dockerregistry/data:/var/lib/registry
+            - /home/walter/fabriq/dockerregistry/data:/var/lib/registry
         networks:
             - frabriqueDev   
 
@@ -42,12 +42,12 @@ services:
             - 8083:4440
             - 8483:4443
         volumes:
-            - /tmp/fabriq/rundeck/etc:/etc/rundeck
-            - /tmp/fabriq/rundeck/var:/var/rundeck
-            - /tmp/fabriq/rundeck/varlog:/var/log/rundeck
-            - /tmp/fabriq/rundeck/plugins:/opt/rundeck-plugins
-            - /tmp/fabriq/rundeck/log:/var/lib/rundeck/logs
-            - /tmp/fabriq/rundeck/data:/var/lib/rundeck/var/storage
+            - /home/walter/fabriq/rundeck/etc:/etc/rundeck
+            - /home/walter/fabriq/rundeck/var:/var/rundeck
+            - /home/walter/fabriq/rundeck/varlog:/var/log/rundeck
+            - /home/walter/fabriq/rundeck/plugins:/opt/rundeck-plugins
+            - /home/walter/fabriq/rundeck/log:/var/lib/rundeck/logs
+            - /home/walter/fabriq/rundeck/data:/var/lib/rundeck/var/storage
         environment:
             - RUNDECK_ADMIN_PASSWORD=admin
         networks:
@@ -58,19 +58,19 @@ services:
         ports:
             - 8084:80
         volumes:
-            - /tmp/fabriq/nginx/html:/usr/share/nginx/html 
+            - /home/walter/fabriq/nginx/html:/usr/share/nginx/html 
         networks:
             - frabriqueDev
             
     sonarqube:
-        image: sonarqube:6.3-alpine
+        image: sonarqube:6.3
         ports:
             - 8085:9000
         volumes:
-            - /tmp/fabriq/sonarqube/conf:/opt/sonarqube/conf
-            - /tmp/fabriq/sonarqube/data:/opt/sonarqube/data
-            - /tmp/fabriq/sonarqube/extensions:/opt/sonarqube/extensions
-            - /tmp/fabriq/sonarqube/bundled-plugins:/opt/sonarqube/lib/bundled-plugins
+            - /home/walter/fabriq/sonarqube/conf:/opt/sonarqube/conf
+            - /home/walter/fabriq/sonarqube/data:/opt/sonarqube/data
+            - /home/walter/fabriq/sonarqube/extensions:/opt/sonarqube/extensions
+            - /home/walter/fabriq/sonarqube/bundled-plugins:/opt/sonarqube/lib/bundled-plugins
         networks:
             - frabriqueDev  
 
@@ -80,7 +80,7 @@ services:
             MYSQL_ROOT_PASSWORD: example
             MYSQL_DATABASE: redmine
         volumes:
-            - /tmp/fabriq/redmine/db:/var/lib/mysql
+            - /home/walter/fabriq/redmine/db:/var/lib/mysql
         networks:
             - frabriqueDev
 
@@ -92,7 +92,7 @@ services:
            REDMINE_DB_MYSQL: redminedb
            REDMINE_DB_PASSWORD: example
         volumes:
-            - /tmp/fabriq/redmine/files:/usr/src/redmine/files        
+            - /home/walter/fabriq/redmine/files:/usr/src/redmine/files        
         depends_on:
            - redminedb
         networks:
@@ -111,7 +111,7 @@ services:
     wekandb:
         image: mongo
         volumes:
-            - /tmp/fabriq/wekan/mongo:/data/db
+            - /home/walter/fabriq/wekan/mongo:/data/db
         networks:
             - frabriqueDev  
 
@@ -127,9 +127,9 @@ services:
         ports:
             - 8090:80
         volumes:
-            - /tmp/fabriq/svn/local:/var/local/svn
-            - /tmp/fabriq/svn/backup:/var/svn-backup
-            - /tmp/fabriq/svn/dav:/etc/apache2/dav_svn/
+            - /home/walter/fabriq/svn/local:/var/local/svn
+            - /home/walter/fabriq/svn/backup:/var/svn-backup
+            - /home/walter/fabriq/svn/dav:/etc/apache2/dav_svn/
         networks:
             - frabriqueDev  
         
@@ -138,8 +138,8 @@ services:
         ports:
             - 8091:8085
         volumes:
-            - /tmp/fabriq/bamboo/data:/var/atlassian/bamboo
-            - /tmp/fabriq/bamboo/logs:/opt/atlassian/bamboo/logs
+            - /home/walter/fabriq/bamboo/data:/var/atlassian/bamboo
+            - /home/walter/fabriq/bamboo/logs:/opt/atlassian/bamboo/logs
         networks:
             - frabriqueDev  
             
@@ -148,7 +148,7 @@ services:
         ports:
             - 8092:8081
         volumes:
-            - /tmp/fabriq/artifactory:/var/opt/jfrog/artifactory
+            - /home/walter/fabriq/artifactory:/var/opt/jfrog/artifactory
         networks:
             - frabriqueDev  
 
@@ -158,40 +158,40 @@ services:
             - 8093:8153
             - 8094:8154
         volumes:
-            - /tmp/fabriq/godata/addons:/godata/addons
-            - /tmp/fabriq/godata/artifacts:/godata/artifacts
-            - /tmp/fabriq/godata/config:/godata/config
-            - /tmp/fabriq/godata/db:/godata/db
-            - /tmp/fabriq/godata/logs:/godata/logs
-            - /tmp/fabriq/godata/plugins:/godata/plugins 
-            - /tmp/fabriq/godata/go:/home/go 
+            - /home/walter/fabriq/godata/addons:/godata/addons
+            - /home/walter/fabriq/godata/artifacts:/godata/artifacts
+            - /home/walter/fabriq/godata/config:/godata/config
+            - /home/walter/fabriq/godata/db:/godata/db
+            - /home/walter/fabriq/godata/logs:/godata/logs
+            - /home/walter/fabriq/godata/plugins:/godata/plugins 
+            - /home/walter/fabriq/godata/go:/home/go 
         networks:
             - frabriqueDev  
     gocd-dev:
         image: gocd/gocd-dev:16.9.0
         volumes:
             - /var/run/docker.sock:/var/run/docker.sock
-            - /tmp/fabriq/godata/go-agent/log:/var/log/go-server/
+            - /home/walter/fabriq/godata/go-agent/log:/var/log/go-server/
         links:
             - gocd-server
         networks:
             - frabriqueDev 
 
     httpd:
-        image: httpd:2.4.25-alpine
+        image: httpd:2.4.25
         ports:
             - 8095:80
         volumes:
-            - /tmp/fabriq/httpd/html:/usr/local/apache2/htdocs/ 
+            - /home/walter/fabriq/httpd/html:/usr/local/apache2/htdocs/ 
         networks:
             - frabriqueDev 
         
     teamscale:
         image: cqse/teamscale:teamscale_v3.2.0
         volumes:
-            - /tmp/fabriq/teamscale/storage:/opt/teamscale/storage
-            - /tmp/fabriq/teamscale/logs:/opt/teamscale/logs
-            - /tmp/fabriq/teamscale/backup:/backup
+            - /home/walter/fabriq/teamscale/storage:/opt/teamscale/storage
+            - /home/walter/fabriq/teamscale/logs:/opt/teamscale/logs
+            - /home/walter/fabriq/teamscale/backup:/backup
         ports:
             - 8096:8080
         networks:
@@ -200,7 +200,7 @@ services:
     jira:
         image: cptactionhank/atlassian-jira:7.3.3
         volumes:
-            - /tmp/fabriq/jira/logs:/opt/atlassian/jira/logs
+            - /home/walter/fabriq/jira/logs:/opt/atlassian/jira/logs
         ports:
             - 8097:8080
         networks:
@@ -211,14 +211,14 @@ services:
         ports:
             - 8100:2222
         volumes:
-            - /tmp/fabriq/mercurial/:/var/lib/mercurial-server/repos
+            - /home/walter/fabriq/mercurial/:/var/lib/mercurial-server/repos
         networks:
             - frabriqueDev 
     bitbucket:
         image: cptactionhank/atlassian-bitbucket:4.14.4
         volumes:
-            - /tmp/fabriq/bitbucket/home:/var/atlassian/bitbucket
-            - /tmp/fabriq/bitbucket/logs:/opt/atlassian/bitbucket/logs
+            - /home/walter/fabriq/bitbucket/home:/var/atlassian/bitbucket
+            - /home/walter/fabriq/bitbucket/logs:/opt/atlassian/bitbucket/logs
         ports:
             - 8200:7990
         networks:
@@ -227,15 +227,15 @@ services:
     teamcity:
         image: jetbrains/teamcity-server:10.0.5
         volumes:
-            - /tmp/fabriq/teamcity/home:/data/teamcity_server/datadir
-            - /tmp/fabriq/teamcity/logs:/opt/teamcity/logs
+            - /home/walter/fabriq/teamcity/home:/data/teamcity_server/datadir
+            - /home/walter/fabriq/teamcity/logs:/opt/teamcity/logs
         ports:
             - 8101:8111
         networks:
             - frabriqueDev  
  
     tomcat:
-        image: tomcat:9-alpine
+        image: tomcat:9
         ports:
             - 9090:8080
         networks:

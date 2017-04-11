@@ -15,11 +15,5 @@ services:
             - 9080:9080
             - 9443:9443
          volumes:
-            - /tmp/fabriq/websphere/yourwar.war:/config/dropins/yourwar.war
-        networks:
-            - frabriqueDev
-
-networks:
-  frabriqueDev:
-    driver: bridge
+            - /home/walter/fabriq/websphere/yourwar.war:/config/dropins/yourwar.war
 ```

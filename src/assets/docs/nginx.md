@@ -11,16 +11,11 @@ version: "3"
 
 services:
     nginx:
-        image: nginx:1.11-alpine
+        image: nginx:1.11
         ports:
             - 8084:80
         volumes:
-            - /tmp/fabriq/nginx/html:/usr/share/nginx/html 
-        networks:
-            - frabriqueDev  
+            - /home/walter/fabriq/nginx/html:/usr/share/nginx/html 
 
-networks:
-  frabriqueDev:
-    driver: bridge
 ```
 

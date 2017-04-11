@@ -4,7 +4,7 @@ Jenkins
 Official docker image : https://hub.docker.com/_/jenkins/
 
 
-Faire un `mkdir -p /tmp/fabriq/jenkins` et `sudo chown 1000 /tmp/fabriq/jenkins` pour autoriser jenkins a écrire sur le volume  
+Faire un `mkdir -p /home/walter/fabriq/jenkins` et `sudo chown 1000 /home/walter/fabriq/jenkins` pour autoriser jenkins a écrire sur le volume  
 
 * Docker compose :
 
@@ -13,17 +13,12 @@ version: "3"
 
 services:
     jenkins:
-        image: jenkins:2.32.3-alpine
+        image: jenkins:2.46.1
         ports:
             - 8081:8080
         volumes:
-            - /tmp/fabriq/jenkins:/var/jenkins_home 
-        networks:
-            - frabriqueDev  
+            - /home/walter/fabriq/jenkins:/var/jenkins_home 
 
-networks:
-  frabriqueDev:
-    driver: bridge
 ```
 
 ATTENTION : recuperer le mot de passe Jenkins dans les logs

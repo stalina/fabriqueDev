@@ -15,11 +15,6 @@ services:
         ports:
             - 8092:8081
         volumes:
-            - /tmp/fabriq/artifactory:/var/opt/jfrog/artifactory
-        networks:
-            - frabriqueDev    
+            - /home/walter/fabriq/artifactory:/var/opt/jfrog/artifactory
 
-networks:
-  frabriqueDev:
-    driver: bridge
 ```
