@@ -9,7 +9,7 @@ docker image : https://hub.docker.com/_/jetty/
 version: "3"
 
 services:
-    tomcat:
+    jetty:
         image: jetty:9.4.3-alpine
         ports:
             - 8087:8080
