@@ -13,6 +13,8 @@ services:
         image: tomcat:9-alpine
         ports:
             - 9090:8080
+        volumes:
+            - /home/walter/tomcat/ROOT:/usr/local/tomcat/webapps/ROOT
         networks:
             - frabriqueDev
 
