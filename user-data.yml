@@ -1,0 +1,44 @@
+#cloud-config
+users:
+   - name: "walter"
+     passwd: "$1$lPKMNI1A$LYaN/ZhzdeBpo4qqLZZmQ."
+     groups:
+        - "sudo"
+        - "docker"
+write_files:
+  - path: "/home/walter/installDockerCompose.sh"
+    permissions: "777"
+    owner: "walter"
+    content: |
+        #!/bin/bash
+        mkdir -p /opt/bin
+        curl -L https://github.com/docker/compose/releases/download/1.11.2/docker-compose-`uname -s`-`uname -m` > /opt/bin/docker-compose
+        chmod +x /opt/bin/docker-compose
+  - path: "/home/walter/docker-compose.yml"
+    permissions: "777"
+    content: |
+        version: '3'       
+        services:
+            nginx-proxy:
+                image: jwilder/nginx-proxy
+                container_name: nginx-proxy
+                ports:
+                    - "80:80"
+                volumes:
+                    - /var/run/docker.sock:/tmp/docker.sock:ro
+          
+coreos:
+    units:
+        - name: dockercompose.service
+          command: start 
+          content: |  
+            [Unit]
+            Description=Install Docker Compose
+
+            [Service]
+            Type=oneshot
+            RemainAfterExit=true
+            ExecStart=/usr/bin/sh /home/walter/installDockerCompose.sh
+
+            [Install]
+            WantedBy=local.target              
