@@ -8,11 +8,6 @@
     margin: 0 auto;
     margin:5px;
 }
-.none{
-    height: 100px;
-    width: 100px;
-    margin:5px;
-}
 
 @-webkit-keyframes clignote {
 0% {opacity:0;}
