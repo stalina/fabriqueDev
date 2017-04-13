@@ -13,12 +13,9 @@ services:
         image: tomcat:9
         ports:
             - 9090:8080
+        environment:
+            - VIRTUAL_HOST=tomcat.{{this.identityService.identity.ciDomain}}
+            - VIRTUAL_PORT=8080  
         volumes:
             - /home/walter/tomcat/ROOT:/usr/local/tomcat/webapps/ROOT
-        networks:
-            - frabriqueDev
-
-networks:
-  frabriqueDev:
-    driver: bridge
 ```

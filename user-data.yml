@@ -16,6 +16,7 @@ write_files:
         chmod +x /opt/bin/docker-compose
   - path: "/home/walter/docker-compose.yml"
     permissions: "777"
+    owner: "walter"
     content: |
         version: '3'       
         services:

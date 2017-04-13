@@ -13,6 +13,9 @@ services:
         image: marvambass/subversion
         ports:
             - 8090:80
+        environment:
+            - VIRTUAL_HOST=svn.{{this.identityService.identity.ciDomain}}
+            - VIRTUAL_PORT=80  
         volumes:
             - /home/walter/fabriq/svn/local:/var/local/svn
             - /home/walter/fabriq/svn/backup:/var/svn-backup

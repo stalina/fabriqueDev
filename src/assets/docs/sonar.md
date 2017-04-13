@@ -14,6 +14,9 @@ services:
         image: sonarqube:6.3
         ports:
             - 8085:9000
+        environment:
+            - VIRTUAL_HOST=sonar.{{this.identityService.identity.ciDomain}}
+            - VIRTUAL_PORT=9000  
         volumes:
             - /home/walter/fabriq/sonarqube/conf:/opt/sonarqube/conf
             - /home/walter/fabriq/sonarqube/data:/opt/sonarqube/data

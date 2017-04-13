@@ -13,6 +13,9 @@ services:
         image: keyvanfatehi/sinopia:latest
         ports:
             - 4873:4873
+        environment:
+            - VIRTUAL_HOST=sinopia.{{this.identityService.identity.ciDomain}}
+            - VIRTUAL_PORT=4873  
         networks:
             - frabriqueDev  
 

@@ -16,6 +16,9 @@ services:
         image: jenkins:2.46.1
         ports:
             - 8081:8080
+        environment:
+            - VIRTUAL_HOST=jenkins.{{this.identityService.identity.ciDomain}}
+            - VIRTUAL_PORT=8080              
         volumes:
             - /home/walter/fabriq/jenkins:/var/jenkins_home 
 

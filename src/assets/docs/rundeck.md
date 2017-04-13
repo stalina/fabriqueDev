@@ -24,6 +24,8 @@ services:
         environment:
             - RUNDECK_ADMIN_PASSWORD=admin
             - SERVER_URL=http://localhost:8083
+            - VIRTUAL_HOST=rundeck.{{this.identityService.identity.ciDomain}}
+            - VIRTUAL_PORT=4440  
 ```
 
 * connectez vous sur 

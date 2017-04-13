@@ -25,6 +25,8 @@ services:
         environment:
            REDMINE_DB_MYSQL: redminedb
            REDMINE_DB_PASSWORD: example
+           VIRTUAL_HOST: redmine.{{this.identityService.identity.ciDomain}}
+           VIRTUAL_PORT: 3000  
         volumes:
             - /home/walter/fabriq/redmine/files:/usr/src/redmine/files
         depends_on:

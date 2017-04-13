@@ -14,6 +14,9 @@ services:
         image: nginx:1.11
         ports:
             - 8084:80
+        environment:
+            - VIRTUAL_HOST=nginx.{{this.identityService.identity.ciDomain}}
+            - VIRTUAL_PORT=80            
         volumes:
             - /home/walter/fabriq/nginx/html:/usr/share/nginx/html 
 

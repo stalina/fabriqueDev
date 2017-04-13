@@ -22,6 +22,8 @@ services:
             - MONGO_URL=mongodb://db:27017/rocketchat
             - ROOT_URL=https://chat.inumio.com
             - Accounts_UseDNSDomainCheck=True
+            - VIRTUAL_HOST=rocketchat.{{this.identityService.identity.ciDomain}}
+            - VIRTUAL_PORT=3000  
         links:
             - db:db
         ports:

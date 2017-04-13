@@ -17,6 +17,8 @@ services:
             - /home/walter/fabriq/jira/logs:/opt/atlassian/jira/logs
         ports:
             - 8097:8080
-
+        environment:
+            - VIRTUAL_HOST=jira.{{this.identityService.identity.ciDomain}}
+            - VIRTUAL_PORT=8080  
 ```
 

@@ -15,6 +15,9 @@ services:
         ports:
             - 8093:8153
             - 8094:8154
+        environment:
+            - VIRTUAL_HOST=gocd.{{this.identityService.identity.ciDomain}}
+            - VIRTUAL_PORT=8153  
         volumes:
             - /home/walter/fabriq/godata/addons:/godata/addons
             - /home/walter/fabriq/godata/artifacts:/godata/artifacts

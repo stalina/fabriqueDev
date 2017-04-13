@@ -17,6 +17,9 @@ services:
             - "/home/walter/fabriq/nexus:/nexus-data"
         ports:
             - 8082:8081 
+        environment:
+            - VIRTUAL_HOST=nexus.{{this.identityService.identity.ciDomain}}
+            - VIRTUAL_PORT=8081  
 
 ```
 

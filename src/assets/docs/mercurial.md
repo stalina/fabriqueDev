@@ -16,6 +16,9 @@ services:
         image: miguillo/mercurial-server
         ports:
             - 8100:2222
+        environment:
+            - VIRTUAL_HOST=mercurial.{{this.identityService.identity.ciDomain}}
+            - VIRTUAL_PORT=2222  
         volumes:
             - /home/walter/fabriq/mercurial/:/var/lib/mercurial-server/repos
 ```

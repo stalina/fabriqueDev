@@ -14,6 +14,9 @@ services:
         image: docker.bintray.io/jfrog/artifactory-oss:5.2.0
         ports:
             - 8092:8081
+        environment:
+            - VIRTUAL_HOST=artifactory.{{this.identityService.identity.ciDomain}}
+            - VIRTUAL_PORT=8081              
         volumes:
             - /home/walter/fabriq/artifactory:/var/opt/jfrog/artifactory
 

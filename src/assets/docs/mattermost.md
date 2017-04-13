@@ -13,10 +13,7 @@ services:
         image: mattermost/mattermost-preview:3.7
         ports:
             - 8077:8065
-        networks:
-            - frabriqueDev  
-
-networks:
-  frabriqueDev:
-    driver: bridge
+        environment:
+            - VIRTUAL_HOST=mattermost.{{this.identityService.identity.ciDomain}}
+            - VIRTUAL_PORT=8065  
 ```

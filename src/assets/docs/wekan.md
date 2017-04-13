@@ -15,7 +15,9 @@ services:
             - 8086:80
         environment:
             - MONGO_URL=mongodb://wekandb/wekan
-            - ROOT_URL=http://localhost:8086
+            - ROOT_URL=http://wekan.{{this.identityService.identity.ciDomain}}
+            - VIRTUAL_HOST=wekan.{{this.identityService.identity.ciDomain}}
+            - VIRTUAL_PORT=80  
 
     
     wekandb:

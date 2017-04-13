@@ -69,6 +69,8 @@ services:
             ZULIP_USER_PASS: "zulip"
             ZULIP_USER_DOMAIN: "example.com"
             ZULIP_USER_FULLNAME: "Zulip Example User"
+            VIRTUAL_HOST: zulip.{{this.identityService.identity.ciDomain}}
+            VIRTUAL_PORT: 80  
         volumes:
             - "/home/walter/fabriq/zulip/zulip:/data:rw"
 

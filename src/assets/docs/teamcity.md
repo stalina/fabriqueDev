@@ -17,5 +17,8 @@ services:
             - /home/walter/fabriq/teamcity/logs:/opt/teamcity/logs
         ports:
             - 8101:8111
+        environment:
+            - VIRTUAL_HOST=teamcity.{{this.identityService.identity.ciDomain}}
+            - VIRTUAL_PORT=8111  
 
 ```

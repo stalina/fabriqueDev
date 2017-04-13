@@ -1,8 +1,10 @@
-import { Component,ViewEncapsulation, Input, OnInit } from '@angular/core';
+import { Component, ViewEncapsulation, Input, OnInit } from '@angular/core';
 import { Tools } from '../tools'
 import { IdentityService } from '../identity.service';
 import { CheckToolsService } from '../check-tools.service'
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbAlertConfig } from '@ng-bootstrap/ng-bootstrap';
+
 import { Observable } from 'rxjs/Rx';
 
 @Component({
@@ -13,24 +15,29 @@ import { Observable } from 'rxjs/Rx';
 })
 export class ToolsComponent implements OnInit {
   health = false;
+  type = "danger";
+  message = "Your tools doesn't work ! "
 
   @Input() public tools: Tools;
   @Input() public name: string;
+  @Input() public group: string;
   ngOnInit() {
     this.health = this.isEnable(this.tools, this.identityService)
-    Observable.interval(10000).subscribe(x => {
-      this.checkToolsService.health(this.tools)
-        .subscribe(
-        health => this.toolsIsEnabled(this.tools, this.identityService),
-        error => this.health = this.isEnable(this.tools, this.identityService));
-    });
   }
-  constructor(private modalService: NgbModal, private checkToolsService: CheckToolsService, private identityService: IdentityService) {
-
+  constructor(private modalService: NgbModal, private checkToolsService: CheckToolsService, alertConfig: NgbAlertConfig, private identityService: IdentityService) {
+    alertConfig.dismissible = false;
+    this.message = "Your tools doesn't work !"
   }
 
   open(content) {
-    this.modalService.open(content,{ windowClass: 'dark-modal',size: 'lg' });
+    this.modalService.open(content, { windowClass: 'dark-modal', size: 'lg' });
+  }
+
+  check() {
+    this.checkToolsService.health(this.tools)
+      .subscribe(
+      health => this.toolsIsEnabled(this.tools, this.identityService),
+      error => this.health = this.isEnable(this.tools, this.identityService));
   }
 
   private isEnable(tools: Tools, identityService: IdentityService) {
@@ -81,6 +88,14 @@ export class ToolsComponent implements OnInit {
         return identityService.identity.communication;
       case Tools.ROCKETCHAT:
         return identityService.identity.communication;
+      case Tools.WEKAN:
+        return identityService.identity.organization;
+      case Tools.JIRA:
+        return identityService.identity.organization;
+      case Tools.REDMINE:
+        return identityService.identity.organization;
+      case Tools.MANTIS:
+        return identityService.identity.organization;
       default:
         return false;
     }
@@ -157,8 +172,23 @@ export class ToolsComponent implements OnInit {
       case Tools.ROCKETCHAT:
         identityService.identity.communication = true;
         break;
+      case Tools.WEKAN:
+        identityService.identity.organization = true;
+        break;
+      case Tools.JIRA:
+        identityService.identity.organization = true;
+        break;
+      case Tools.REDMINE:
+        identityService.identity.organization = true;
+        break;
+      case Tools.MANTIS:
+        identityService.identity.organization = true;
+        break;
     }
+
     this.health = true;
+    this.type = "success"
+    this.message = "Your tools works !"
     identityService.save();
   }
 }

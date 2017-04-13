@@ -14,9 +14,7 @@ services:
         ports:
             - 8087:8080
             - 8088:8443
-        networks:
-            - frabriqueDev
-networks:
-  frabriqueDev:
-    driver: bridge
+        environment:
+            - VIRTUAL_HOST=jetty.{{this.identityService.identity.ciDomain}}
+            - VIRTUAL_PORT=8080              
 ```

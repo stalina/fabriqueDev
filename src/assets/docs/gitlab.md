@@ -16,6 +16,9 @@ services:
         ports:
             - 8080:80
             - 8443:443
+        environment:
+            - VIRTUAL_HOST=gitlab.{{this.identityService.identity.ciDomain}}
+            - VIRTUAL_PORT=80                   
         volumes:
             - /home/walter/fabriq/gitlab/config:/etc/gitlab 
             - /home/walter/fabriq/gitlab/logs:/var/log/gitlab 

@@ -17,5 +17,8 @@ services:
             - /home/walter/fabriq/teamscale/backup:/backup
         ports:
             - 8096:8080
+        environment:
+            - VIRTUAL_HOST=teamscale.{{this.identityService.identity.ciDomain}}
+            - VIRTUAL_PORT=8080  
 ```
 

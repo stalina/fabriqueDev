@@ -17,7 +17,7 @@ export class CheckToolsService {
 
 
   health(tools: Tools): Observable<Boolean> {
-    return this.http.get(tools.toString().replace("CI_IP", this.identityService.identity.ciIp).toString())
+    return this.http.get(tools.toString().replace("CI_DOMAIN", this.identityService.identity.ciDomain).toString())
       .map(this.extractData)
       .catch(this.handleError);
   }

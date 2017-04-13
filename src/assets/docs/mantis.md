@@ -16,8 +16,9 @@ services:
         links:
             - mysql
         restart: always
-        networks:
-            - frabriqueDev
+        environment:
+            - VIRTUAL_HOST=mantis.{{this.identityService.identity.ciDomain}}
+            - VIRTUAL_PORT=80  
     mysql:
         image: mysql:latest
         environment:
@@ -26,12 +27,7 @@ services:
             - MYSQL_USER=mantisbt
             - MYSQL_PASSWORD=mantisbt
         restart: always
-        networks:
-            - frabriqueDev
 
-networks:
-  frabriqueDev:
-    driver: bridge
 ```
 
 * Connet to http://<IP>:8989/
