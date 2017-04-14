@@ -335,7 +335,8 @@ write_files:
                 ports:
                     - "81:80"
                 environment:
-                    - VIRTUAL_HOST=breizh.ci                                
+                    - VIRTUAL_HOST=breizh.ci
+                                                    
 coreos:
     units:
         - name: dockercompose.service
