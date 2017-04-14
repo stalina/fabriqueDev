@@ -70,6 +70,6 @@
     <img (click)="open(slider)" width="100px" src="assets/docker.png">
   </div>
   <div>
-    <img (click)="open(swarm)" width="100px" src="assets/dockerswarm.png">
+    <img (click)="open(swarm)" *ngIf="this.identityService.identity.ci && this.identityService.identity.communication && this.identityService.identity.ops && this.identityService.identity.server && this.identityService.identity.scm && this.identityService.identity.repo && this.identityService.identity.organization && this.identityService.identity.quality" width="100px" src="assets/dockerswarm.png">
   </div>
 </div>
