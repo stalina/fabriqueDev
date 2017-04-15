@@ -6,7 +6,7 @@
       </button>
   </div>
   <div class="modal-body">
-    <div Markdown path="assets/docs/{{name}}.md"></div>
+    <markdown [data]="markdown"></markdown>
   </div>
   <div class="modal-footer">
     <ngb-alert [type]="type">{{ message }}</ngb-alert>

@@ -4,6 +4,7 @@ import { IdentityService } from '../identity.service';
 import { CheckToolsService } from '../check-tools.service'
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { NgbAlertConfig } from '@ng-bootstrap/ng-bootstrap';
+import { Http } from '@angular/http';
 
 import { Observable } from 'rxjs/Rx';
 
@@ -17,14 +18,17 @@ export class ToolsComponent implements OnInit {
   health = false;
   type = "danger";
   message = "Your tools doesn't work ! "
-
+  markdown: String = '';
   @Input() public tools: Tools;
   @Input() public name: string;
   @Input() public group: string;
   ngOnInit() {
     this.health = this.isEnable(this.tools, this.identityService)
+    this.http.get('assets/docs/' + this.name + '.md')
+      .subscribe(res => this.markdown = res.text().replace("{{this.identityService.identity.ciDomain}}", this.identityService.identity.ciDomain))
+
   }
-  constructor(private modalService: NgbModal, private checkToolsService: CheckToolsService, alertConfig: NgbAlertConfig, private identityService: IdentityService) {
+  constructor(private http: Http, private modalService: NgbModal, private checkToolsService: CheckToolsService, alertConfig: NgbAlertConfig, private identityService: IdentityService) {
     alertConfig.dismissible = false;
     this.message = "Your tools doesn't work !"
   }
