@@ -7,9 +7,8 @@
     background-color: red;
 }
 .none{
-    height: 100px;
-    width: 100px;
-    margin:5px;
+    height: 100%;
+    width: 100%;
 }
 .tools{
     display: table;
