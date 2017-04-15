@@ -4,7 +4,7 @@ Jenkins
 Official docker image : https://hub.docker.com/_/jenkins/
 
 
-Faire un `mkdir -p /home/walter/fabriq/jenkins` et `sudo chown 1000 /home/walter/fabriq/jenkins` pour autoriser jenkins a écrire sur le volume  
+Launch cmd `mkdir -p /home/walter/fabriq/jenkins`, then `sudo chown 1000 /home/walter/fabriq/jenkins` to autorise jenkins to write on the volume 
 
 * Docker compose :
 
@@ -24,15 +24,13 @@ services:
 
 ```
 
-ATTENTION : recuperer le mot de passe Jenkins dans les logs
 
+* Connect to :
+http://<your_ci_uri>:8081/
 
-* Se connecter à :
-http://<IP>:8081/
-
-* Entrer le mot ce passe admin retrouvé dans les logs.
-* Selectionner "select plugin to install" => cocher les plugin qui correspondent à votre SCM + NodeJs Plugin
-* "Suivant" (keep calm, download is coming)
-* Créer votre utilisateur jenkins
-* Créer un job "freestyle"
-* builder en utilisant les commandes nodeJS : npm install & ng build --prod
+* Enter password found within the startup logs : `docker-compose logs jenkins`
+* Select "select plugin to install" => then select plugins correspondig to your SCM + NodeJs Plugin
+* "Next" (keep calm, download is coming)
+* Create your user
+* Manage Jenkins and add change the global tool configuration to a a 6.10.2 version of NodeJs
+* Create a "freestyle" job, set up your repository URL (be carefull), provide Npm and node folder to your PATH and run shell script `npm install; npm run build --prod`
