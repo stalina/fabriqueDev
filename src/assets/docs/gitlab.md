@@ -12,7 +12,7 @@ version: "3"
 services:
     gitlab:
         image: gitlab/gitlab-ce:9.0.0-ce.0
-        hostname: <your_ci_uri>
+        hostname: $$your_ci_uri$$
         ports:
             - 8080:80
             - 8443:443
@@ -27,7 +27,7 @@ services:
 ```
 
 * Se connecter à :
-http://<IP>:8080/
+http://<your_ci_uri>:8080/
 
-* Changer le mot de passe.
+* Changer le mot de passe `root`
 * New project, git repo by url : https://github.com/stalina/fabriqueDev.git, public project
