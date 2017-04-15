@@ -26,8 +26,8 @@ services:
 
 ```
 
-* Se connecter à :
+* Connect to :
 http://<your_ci_uri>:8080/
 
-* Changer le mot de passe `root`
+* Change `root` password
 * New project, git repo by url : https://github.com/stalina/fabriqueDev.git, public project
