@@ -26,7 +26,6 @@ export class ToolsComponent implements OnInit {
     this.health = this.isEnable(this.tools, this.identityService)
     this.http.get('assets/docs/' + this.name + '.md')
       .subscribe(res => this.markdown = res.text().replace("{{this.identityService.identity.ciDomain}}", this.identityService.identity.ciDomain))
-
   }
   constructor(private http: Http, private modalService: NgbModal, private checkToolsService: CheckToolsService, alertConfig: NgbAlertConfig, private identityService: IdentityService) {
     alertConfig.dismissible = false;

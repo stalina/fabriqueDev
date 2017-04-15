@@ -1,12 +1,7 @@
 <div fxLayout="column" fxLayoutAlign="space-around stretch">
   <app-cycle></app-cycle>
-  <div id="breakingbad" fxLayout="row" fxLayoutAlign="center stretch"           class="fxClass-all"
-          class.xs="fxClass-xs"
-          [class.sm]="{'fxClass-sm': hasStyle}"
-          [class.md]="{'fxClass-md': hasStyle, 'fxClass-md2': hasStyle}"
-          [class.lg]="['fxClass-lg', 'fxClass-lg2']">
-    <div fxLayout="column"  fxFlex="50%" fxFlex.gt-sm="25%">
-      <div class="none"></div>
+  <div id="breakingbad" fxLayout="row" fxLayoutAlign="center stretch">
+    <div fxLayout="column"  >
       <div class="ci">
         <app-tools name="jenkins" tools="{{tools.JENKINS}}" group="ci"></app-tools>
       </div>
@@ -22,7 +17,7 @@
         <app-tools name="mercurial" tools="{{tools.MERCURIAL}}" group="scm"></app-tools>
       </div>
     </div>
-    <div fxLayout="column"  fxFlex="50%" fxFlex.gt-sm="25%">
+    <div fxLayout="column"  >
       <div class="server">
         <app-tools name="apache" tools="{{tools.APACHE}}" group="server"></app-tools>
       </div>
@@ -36,7 +31,7 @@
         <app-tools name="svn" tools="{{tools.SVN}}" group="scm"></app-tools>
       </div>
     </div>
-    <div fxLayout="column"  fxFlex="50%" fxFlex.gt-sm="25%">
+    <div fxLayout="column"  >
       <div class="server">
         <app-tools name="websphere" tools="{{tools.WEBSPHERE}}" group="server"></app-tools>
       </div>
@@ -49,7 +44,7 @@
 
       <div class="none"></div>
     </div>
-    <div fxLayout="column"  fxFlex="50%" fxFlex.gt-sm="25%">
+    <div fxLayout="column"  >
       <div class="server">
         <app-tools name="tomcat" tools="{{tools.TOMCAT}}" group="server"></app-tools>
       </div>
@@ -63,7 +58,7 @@
     </div>
     <div fxLayout="column">
     </div>
-    <div fxLayout="column"  fxFlex="50%" fxFlex.gt-sm="25%">
+    <div fxLayout="column"  >
       <div class="none"></div>
       <div class="organization">
         <app-tools name="wekan" tools="{{tools.WEKAN}}" group="organization"></app-tools>
@@ -73,7 +68,7 @@
         <app-tools name="mattermost" tools="{{tools.MATTERMOST}}" group="communication">></app-tools>
       </div>
     </div>
-    <div fxLayout="column"  fxFlex="50%" fxFlex.gt-sm="25%">
+    <div fxLayout="column"  >
       <div class="none"></div>
       <div class="organization">
         <app-tools name="mantis" tools="{{tools.MANTIS}}" group="organization">></app-tools>
@@ -89,7 +84,7 @@
       </div>
 
     </div>
-    <div fxLayout="column" fxFlex="50%" fxFlex.gt-sm="25%">
+    <div fxLayout="column" >
       <div class="quality">
         <app-tools name="sonar" tools="{{tools.SONAR}}" group="quality"></app-tools>
       </div>
@@ -100,7 +95,7 @@
         <app-tools name="dockerhub" tools="{{tools.DOCKERHUB}}" group="repo"></app-tools>
       </div>
     </div>
-    <div fxLayout="column" fxFlex="50%" fxFlex.gt-sm="25%">
+    <div fxLayout="column" >
       <div class="none"></div>
       <div class="repo">
         <app-tools name="nexus" tools="{{tools.NEXUS}}" group="repo"></app-tools>
@@ -109,7 +104,7 @@
         <app-tools name="artifactory" tools="{{tools.ARTIFACTORY}}" group="repo"></app-tools>
       </div>
     </div>
-    <div fxLayout="column" fxFlex="50%" fxFlex.gt-sm="25%">
+    <div fxLayout="column" >
       <div class="none"></div>
       <div class="none"></div>
       <div class="repo">
