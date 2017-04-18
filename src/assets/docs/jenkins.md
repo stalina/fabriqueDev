@@ -25,8 +25,7 @@ services:
 ```
 
 
-* Connect to :
-http://<your_ci_uri>:8081/
+* Connect to : http://jenkins.{{this.identityService.identity.ciDomain}}/
 
 * Enter password found within the startup logs : `docker-compose logs jenkins`
 * Select "select plugin to install" => then select plugins correspondig to your SCM + NodeJs Plugin

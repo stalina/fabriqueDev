@@ -27,7 +27,7 @@ services:
 ```
 
 * Connect to :
-http://<your_ci_uri>:8080/
+http://gitlab.{{this.identityService.identity.ciDomain}}/
 
 * Change `root` password
 * New project, git repo by url : https://github.com/stalina/fabriqueDev.git, public project

@@ -34,5 +34,5 @@ services:
 
 ```
 
-* Connect to http://<your_ci_uri>:3000/
+* Connect to http://redmine.{{this.identityService.identity.ciDomain}}/
 * Admin credentials are : admin/admin

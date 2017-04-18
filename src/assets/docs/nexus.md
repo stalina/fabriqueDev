@@ -24,8 +24,14 @@ services:
 ```
 
 * Connect to 
-http://<your_ci_uri>:8082/
+http://nexus.{{this.identityService.identity.ciDomain}}:8082/
 * Admin credentials are : admin/admin123
+
+Modify your Jenkins job :
+* Create archive after build step : `tar -zcvf fabriq.tar.gz dist`
+* Send it to Nexus : `curl -v -u admin:admin123 --upload-file ./fabriq.tar.gz http://nexus.{{this.identityService.identity.ciDomain}}:8082/repository/fabriq/fabriq.tar.gz`
+(this can also be done using Nexus specific plugin)
+
 
 
 

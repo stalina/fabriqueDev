@@ -21,6 +21,7 @@ services:
             - /home/walter/fabriq/rundeck/plugins:/opt/rundeck-plugins
             - /home/walter/fabriq/rundeck/log:/var/lib/rundeck/logs
             - /home/walter/fabriq/rundeck/data:/var/lib/rundeck/var/storage
+            - /home/walter/fabriq/shared:/tmp/fabriq/shared
         environment:
             - RUNDECK_ADMIN_PASSWORD=admin
             - SERVER_URL=http://localhost:8083
@@ -28,5 +29,5 @@ services:
             - VIRTUAL_PORT=4440  
 ```
 
-* Connect to : http://<your_ci_uri>:8083/
+* Connect to : http://rundeck.{{this.identityService.identity.ciDomain}}/
 * Admin credentials are : admin/admin

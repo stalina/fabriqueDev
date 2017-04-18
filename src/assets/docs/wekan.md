@@ -27,4 +27,4 @@ services:
 
 ```
 
-* creer votre propre utilisateur (une erreur 500 peut survenir mais peut-être ignorée)
+* Create your own user (a 500 HTTP error might happened, this can be ignored)

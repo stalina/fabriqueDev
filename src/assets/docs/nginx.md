@@ -17,5 +17,5 @@ services:
             - VIRTUAL_HOST=nginx.{{this.identityService.identity.ciDomain}}
             - VIRTUAL_PORT=80            
         volumes:
-            - /home/walter/fabriq/nginx/html:/usr/share/nginx/html 
+            - /home/walter/fabriq/shared:/usr/share/nginx/html
 ```
