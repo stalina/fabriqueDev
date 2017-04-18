@@ -3,6 +3,7 @@ Rundeck
 
 Official docker image : https://hub.docker.com/r/jordan/rundeck/
 
+Launch cmd `sudo mkdir -p /home/walter/fabriq/shared`, then `sudo chmod 777 /home/walter/fabriq/shared` to be autorised to write on the volume.  
 
 * Docker compose :
 
@@ -31,3 +32,9 @@ services:
 
 * Connect to : http://rundeck.{{this.identityService.identity.ciDomain}}/
 * Admin credentials are : admin/admin
+* Create a Project (use `stub`)
+* Create a job
+* Add command step to upload artefact : `curl -v -u admin:admin123 -O http://nexus.{{this.identityService.identity.ciDomain}}/repository/fabriq/fabriq.tar.gz`
+* Add command step to untar the archive : `tar -zxf fabriq.tar.gz`
+* Add command step to move content to shared folder : `cp -rf ./dist/* /tmp/fabriq/shared`
+* Run the job
