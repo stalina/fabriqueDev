@@ -1,8 +1,9 @@
 Bitbucket
 ============
 
-Official docker image : https://hub.docker.com/r/cptactionhank/atlassian-bitbucket/ 
+Docker image : https://hub.docker.com/r/cptactionhank/atlassian-bitbucket/ 
 
+You'll need a trial licence to use Bitbucket.
 
 * Docker compose :
 

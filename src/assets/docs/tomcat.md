@@ -1,7 +1,7 @@
 Docker Tomcat
 ===================
 
-docker image : https://hub.docker.com/_/tomcat/
+Official docker image : https://hub.docker.com/_/tomcat/
 
 * Docker compose :
 

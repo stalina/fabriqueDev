@@ -1,8 +1,9 @@
 JIRA
 ============
 
-Official docker image : https://hub.docker.com/r/cptactionhank/atlassian-jira/ 
+Docker image : https://hub.docker.com/r/cptactionhank/atlassian-jira/ 
 
+You'll need a trial licence to use Jira.
 
 * Docker compose :
 

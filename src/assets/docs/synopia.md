@@ -1,7 +1,7 @@
 Synopia
 ===================
 
-offical docker image : https://hub.docker.com/r/keyvanfatehi/sinopia/ 
+Docker image : https://hub.docker.com/r/keyvanfatehi/sinopia/ 
 
 * Docker compose :
 

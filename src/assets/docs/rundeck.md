@@ -28,6 +28,5 @@ services:
             - VIRTUAL_PORT=4440  
 ```
 
-* connectez vous sur 
-http://<IP>:8083/
-* connectez vous en tant qu'admin : admin/admin
+* Connect to : http://<your_ci_uri>:8083/
+* Admin credentials are : admin/admin

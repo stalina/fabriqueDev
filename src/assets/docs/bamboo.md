@@ -1,9 +1,9 @@
 Bamboo
 ===================
 
-docker image : https://hub.docker.com/r/cptactionhank/atlassian-bamboo/
+Docker image : https://hub.docker.com/r/cptactionhank/atlassian-bamboo/
 
-necessite une clef de licence d'évaluation
+You'll need a trial licence to use Bamboo.
 
 * Docker compose :
 

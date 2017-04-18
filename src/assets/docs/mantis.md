@@ -1,7 +1,7 @@
 Docker Mantis
 ===================
 
-docker image : https://hub.docker.com/r/vimagick/mantisbt/
+Docker image : https://hub.docker.com/r/vimagick/mantisbt/
 
 * Docker compose :
 
@@ -30,7 +30,7 @@ services:
 
 ```
 
-* Connet to http://<IP>:8989/
+* Connet to http://<your_ci_uri>:8989/
 * Enter in Hostname this value : mysql
 * Enter in Username this value : mantisbt
 * Enter in Password this value : mantisbt

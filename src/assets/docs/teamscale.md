@@ -1,7 +1,7 @@
 Teamscale
 ============
 
-Official docker image : https://hub.docker.com/r/cqse/teamscale/
+Docker image : https://hub.docker.com/r/cqse/teamscale/
 
 
 * Docker compose :

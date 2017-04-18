@@ -1,7 +1,7 @@
 Docker Registry
 ===================
 
-docker image : https://hub.docker.com/_/registry/
+Official docker image : https://hub.docker.com/_/registry/
 
 * Docker compose :
 

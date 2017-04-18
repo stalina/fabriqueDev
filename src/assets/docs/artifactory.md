@@ -1,7 +1,7 @@
 Artifactory
 ===================
 
-docker image : https://bintray.com/jfrog/reg2/jfrog:artifactory-oss
+Docker image : https://bintray.com/jfrog/reg2/jfrog:artifactory-oss
 
 
 * Docker compose :

@@ -1,7 +1,7 @@
 Docker Jetty
 ===================
 
-docker image : https://hub.docker.com/_/jetty/
+Official Docker image : https://hub.docker.com/_/jetty/
 
 * Docker compose :
 

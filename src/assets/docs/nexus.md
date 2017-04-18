@@ -3,7 +3,7 @@ Nexus
 
 Official docker image : https://hub.docker.com/r/sonatype/nexus3/
 
-Faire un `sudo mkdir -p /home/walter/fabriq/nexus` et `sudo chown 200 /home/walter/fabriq/nexus` pour autoriser jenkins a écrire sur le volume  
+Launch cmd `sudo mkdir -p /home/walter/fabriq/nexus`, then `sudo chown 200 /home/walter/fabriq/nexus` to be autorised to write on the volume.   
 
 * Docker compose :
 
@@ -23,8 +23,10 @@ services:
 
 ```
 
-* connectez vous sur 
-http://<IP>:8082/
-* connectez vous en tant qu'admin : admin/admin123
+* Connect to 
+http://<your_ci_uri>:8082/
+* Admin credentials are : admin/admin123
+
+
 
 

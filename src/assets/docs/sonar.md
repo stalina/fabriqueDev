@@ -25,6 +25,5 @@ services:
 
 ```
 
-* connectez vous sur 
-http://<IP>:8085/
-* connectez vous en tant qu'admin : admin/admin
+* Connect to : http://<your_ci_uri>:8085/
+* Admin credentials are : admin/admin

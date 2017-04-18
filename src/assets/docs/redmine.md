@@ -1,7 +1,7 @@
 Docker Redmine
 ===================
 
-docker image : https://hub.docker.com/_/redmine/
+Official Docker image : https://hub.docker.com/_/redmine/
 
 * Docker compose :
 
@@ -34,6 +34,5 @@ services:
 
 ```
 
-* connectez vous sur 
-http://<IP>:3000/
-* connectez vous en tant qu'admin : admin/admin
+* Connect to http://<your_ci_uri>:3000/
+* Admin credentials are : admin/admin

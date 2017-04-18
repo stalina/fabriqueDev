@@ -1,7 +1,7 @@
 WebSphere
 ===================
 
-docker image : https://hub.docker.com/_/websphere-liberty/
+Official docker image : https://hub.docker.com/_/websphere-liberty/
 
 * Docker compose :
 
