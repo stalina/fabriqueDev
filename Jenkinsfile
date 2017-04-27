@@ -27,10 +27,11 @@ node {
        }
 
        stage('Deploy to prod'){
-         sh 'npm install'
-         sh 'ng build --prod'
-         sh 'cp -rf dist /tmp/prod'
-
+         withEnv(["PATH+NODE=${tool name: 'node', type: 'jenkins.plugins.nodejs.tools.NodeJSInstallation'}/bin"]) {
+           sh 'npm install'
+           sh 'ng build --prod'
+           sh 'cp -rf dist /tmp/prod'
+         }
        }
 
     }
