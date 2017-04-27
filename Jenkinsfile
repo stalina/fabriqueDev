@@ -16,7 +16,7 @@ node {
             sh 'npm prune'
             sh 'npm install'
             sh 'npm install ng'          
-            sh 'npm build --prod'
+            sh 'ng build --prod'
             sh 'cp -rf dist /tmp/recette'
           }
 
@@ -34,7 +34,7 @@ node {
          sh 'npm prune'
          sh 'npm install'
          sh 'npm install ng'          
-         sh 'npm build --prod'
+         sh 'ng build --prod'
          sh 'cp -rf dist /tmp/prod'
 
        }
