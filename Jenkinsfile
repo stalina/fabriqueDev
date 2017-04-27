@@ -15,8 +15,8 @@ node {
             sh 'node -v'
             sh 'npm prune'
             sh 'npm install'
-            sh 'npm install ng'          
-            sh 'node_modules/angular-cli/bin/ng build --prod'
+            sh 'npm install -g angular-cli'          
+            sh 'ng build --prod'
             sh 'cp -rf dist /tmp/recette'
           }
 
