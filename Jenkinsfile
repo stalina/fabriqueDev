@@ -12,10 +12,7 @@ node {
        stage('Deploy to recette'){
 
           withEnv(["PATH+NODE=${tool name: 'node', type: 'jenkins.plugins.nodejs.tools.NodeJSInstallation'}/bin"]) {
-            sh 'node -v'
-            sh 'npm prune'
-            sh 'npm install'
-            sh 'npm install -g angular-cli'          
+            sh 'npm install'       
             sh 'ng build --prod'
             sh 'cp -rf dist /tmp/recette'
           }
@@ -30,10 +27,7 @@ node {
        }
 
        stage('Deploy to prod'){
-         sh 'node -v'
-         sh 'npm prune'
          sh 'npm install'
-         sh 'npm install -g angular-cli'          
          sh 'ng build --prod'
          sh 'cp -rf dist /tmp/prod'
 
