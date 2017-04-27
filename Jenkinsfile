@@ -11,14 +11,12 @@ node {
 
        stage('Test'){
 
-         env.NODE_ENV = "node"
-
-         print "Environment will be : ${env.NODE_ENV}"
-        
-         sh 'node -v'
-         sh 'npm prune'
-         sh 'npm install'
-         sh 'npm test'
+          withEnv(["PATH+NODE=${tool name: 'node', type: 'jenkins.plugins.nodejs.tools.NodeJSInstallation'}/bin"]) {
+            sh 'node -v'
+            sh 'npm prune'
+            sh 'npm install'
+            sh 'npm test'
+          }
 
        }
 
