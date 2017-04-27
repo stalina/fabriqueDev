@@ -33,7 +33,7 @@ node {
          sh 'node -v'
          sh 'npm prune'
          sh 'npm install'
-         sh 'npm install -g ng'          
+         sh 'npm install -g angular-cli'          
          sh 'ng build --prod'
          sh 'cp -rf dist /tmp/prod'
 
