@@ -1,6 +1,5 @@
 node {
 
-
     currentBuild.result = "SUCCESS"
 
     try {
@@ -12,10 +11,10 @@ node {
 
        stage('Test'){
 
-         env.NODE_ENV = "test"
+         env.NODE_ENV = "node"
 
          print "Environment will be : ${env.NODE_ENV}"
-
+        
          sh 'node -v'
          sh 'npm prune'
          sh 'npm install'
