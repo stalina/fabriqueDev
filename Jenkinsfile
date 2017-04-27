@@ -9,7 +9,7 @@ node {
           checkout scm
        }
 
-       stage('Build'){
+       stage('Deploy to recette'){
 
           withEnv(["PATH+NODE=${tool name: 'node', type: 'jenkins.plugins.nodejs.tools.NodeJSInstallation'}/bin"]) {
             sh 'node -v'
@@ -17,16 +17,11 @@ node {
             sh 'npm install'
             sh 'npm install ng'          
             sh 'npm build --prod'
+            sh 'cp -rf dist /tmp/recette'
           }
 
        }
-
-       stage('Deploy to recette'){
-
-         sh 'cp -rf dist /tmp/recette'
-
-       }
-
+      
        stage('Manual Test'){
 
          echo 'prune and cleanup'
@@ -35,7 +30,11 @@ node {
        }
 
        stage('Deploy to prod'){
-
+         sh 'node -v'
+         sh 'npm prune'
+         sh 'npm install'
+         sh 'npm install ng'          
+         sh 'npm build --prod'
          sh 'cp -rf dist /tmp/prod'
 
        }
