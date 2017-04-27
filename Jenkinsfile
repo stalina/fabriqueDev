@@ -30,7 +30,8 @@ node {
        stage('Manual Test'){
 
          echo 'prune and cleanup'
-         
+         input id: 'Deploy', message: 'Is Blue node fine? Proceed with Green node deployment?', ok: 'Deploy!'
+ 
        }
 
        stage('Deploy to prod'){
