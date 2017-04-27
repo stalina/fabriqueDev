@@ -9,30 +9,35 @@ node {
           checkout scm
        }
 
-       stage('Test'){
+       stage('Build'){
 
           withEnv(["PATH+NODE=${tool name: 'node', type: 'jenkins.plugins.nodejs.tools.NodeJSInstallation'}/bin"]) {
             sh 'node -v'
             sh 'npm prune'
             sh 'npm install'
-            sh 'npm test'
+            sh 'npm install ng'          
+            sh 'npm build --prod'
           }
 
        }
 
-       stage('Deploy'){
+       stage('Deploy to recette'){
 
-         echo 'Deploy'
+         sh 'cp -rf dist /tmp/recette'
 
        }
 
-       stage('Cleanup'){
+       stage('Manual Test'){
 
          echo 'prune and cleanup'
          
        }
 
+       stage('Deploy to prod'){
 
+         sh 'cp -rf dist /tmp/prod'
+
+       }
 
     }
     catch (err) {
